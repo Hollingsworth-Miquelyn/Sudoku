@@ -11,12 +11,24 @@ package sudoku;
  * @author David
  */
 public class Sudoku {
+    //instance variables
+    private String difficulty = "easy";
+    private String playerName = "Sian";
 
-    /**
-     * @param args the command line arguments
-     */
+    public void displayDifficulty(){
+        System.out.println(difficulty);
+    }
+    public void displayPlayerName(){
+        System.out.println(playerName);
+    }
     public static void main(String[] args) {
-        // TODO code application logic here
+        //creating and using objects
+        Sudoku sudoku = new Sudoku();
+        sudoku.displayDifficulty();
+        sudoku.displayPlayerName();
+        Grid grid = new Grid();
+        grid.displaySize();
+        grid.displayPosition();
     }
     
 }
