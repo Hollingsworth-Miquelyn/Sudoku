@@ -14,6 +14,10 @@ public class Grid {
     private int size = 81;
     private int position = 3;
     
+    public Grid(){
+        
+    }
+    
     public void displaySize(){
         System.out.println(size);
     }
