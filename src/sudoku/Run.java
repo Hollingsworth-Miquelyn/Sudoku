@@ -20,6 +20,7 @@ public class Run {
     public void displayNumbers(){
         System.out.println(this.numbers);
     }
+    
     public void displayTimer(){
         System.out.println(this.timer);
     }
