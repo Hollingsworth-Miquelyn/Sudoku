@@ -21,6 +21,7 @@ public class Grid {
     public void displaySize(){
         System.out.println(this.size);
     }
+    
     public void displayPosition(){
         System.out.println(this.position);
     }
