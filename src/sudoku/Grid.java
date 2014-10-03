@@ -7,7 +7,7 @@ package sudoku;
 
 /**
  *
- * @author Stephen
+ * @author Sian
  */
 public class Grid {
     //private so that no one can chage the variables without permission
@@ -19,10 +19,10 @@ public class Grid {
     }
     
     public void displaySize(){
-        System.out.println(size);
+        System.out.println(this.size);
     }
     public void displayPosition(){
-        System.out.println(position);
+        System.out.println(this.position);
     }
 }
 
