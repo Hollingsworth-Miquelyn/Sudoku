@@ -32,11 +32,11 @@ public class Player {
         }
         
         double winLossRatio = wins / totalScore;
-        return winLossRatio*100;
         System.out.println("You have won "
                 + getWinningPercentage() + "% of the games."
                 + wins + " wins, "
                 + losses + " losses");
+        return winLossRatio*100;
     }
         
         
