@@ -26,10 +26,10 @@ public class Sudoku {
     }
     
     public void displayDifficulty(){
-        System.out.println(difficulty);
+        System.out.println(this.difficulty);
     }
     public void displayhighscore(){
-        System.out.println(highScore);
+        System.out.println(this.highScore);
     }
     public void getName(){
         Scanner input = new Scanner(System.in);
@@ -61,6 +61,10 @@ public class Sudoku {
         //creating and using objects
         Hint findingHint = new Hint();
         findingHint.getHint(grid);
+        
+        Run run = new Run();
+        run.displayNumbers();
+        run.displayTimer();
     }
     
 }
