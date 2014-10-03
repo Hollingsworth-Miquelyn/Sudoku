@@ -26,11 +26,19 @@ public class Sudoku {
         Sudoku sudoku = new Sudoku();
         sudoku.displayDifficulty();
         sudoku.displayPlayerName();
+        
+        //creating and using objects
         Grid grid = new Grid();
         grid.displaySize();
         grid.displayPosition();
+        
+        //creating and using objects
         CheckAnswer answerCheck = new CheckAnswer();
         answerCheck.isCorrect(1);
+        
+        //creating and using objects
+        Hint findingHint = new Hint();
+        findingHint.getHint(grid);
     }
     
 }
