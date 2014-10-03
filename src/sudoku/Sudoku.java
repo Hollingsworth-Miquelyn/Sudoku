@@ -29,6 +29,8 @@ public class Sudoku {
         Grid grid = new Grid();
         grid.displaySize();
         grid.displayPosition();
+        CheckAnswer answerCheck = new CheckAnswer();
+        answerCheck.isCorrect(1);
     }
     
 }
