@@ -15,6 +15,10 @@ public class Sudoku {
     private String difficulty = "easy";
     private String playerName = "Sian";
 
+    public Sudoku(){
+        
+    }
+    
     public void displayDifficulty(){
         System.out.println(difficulty);
     }
