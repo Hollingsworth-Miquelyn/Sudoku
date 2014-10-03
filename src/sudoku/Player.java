@@ -24,18 +24,13 @@ public class Player {
     }
     
    
-    private double getWinningPercentage() {
+    public void getWinningPercentage() {
         double totalScore = wins + losses;
         
-        if (totalScore ==  0) {
-            return 0;
-        }
+        double winLossRatio = wins / totalScore *100;
         
-        double winLossRatio = wins / totalScore;
-        return winLossRatio*100;
-        System.out.println("You have won "
-                + getWinningPercentage() + "% of the games."
-                + wins + " wins, "
+        System.out.println("You have won " + winLossRatio + "% of the games."
+                + wins + " wins and "
                 + losses + " losses");
     }
         
