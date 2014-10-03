@@ -15,7 +15,6 @@ import java.util.Scanner;
  * @author Sian
  */
 public class Sudoku {
-    //instance variables
     private String difficulty = "easy";
     private int highScore = 135;
     private String name = "Sian";
@@ -30,8 +29,12 @@ public class Sudoku {
     public void displayDifficulty(){
         System.out.println(difficulty);
     }
+    
+    public void displayDifficulty(){
+        System.out.println(this.difficulty);
+    }
     public void displayhighscore(){
-        System.out.println(highScore);
+        System.out.println(this.highScore);
     }
     public void getName(){
         Scanner input = new Scanner(System.in);
@@ -44,25 +47,25 @@ public class Sudoku {
         System.out.println(this.help);
     }
     public static void main(String[] args) {
-        //creating and using objects
         Sudoku sudoku = new Sudoku();
         sudoku.displayDifficulty();
         sudoku.displayhighscore();
         sudoku.getName();
         sudoku.displayHelp();
         
-        //creating and using objects
         Grid grid = new Grid();
         grid.displaySize();
         grid.displayPosition();
         
-        //creating and using objects
         CheckAnswer answerCheck = new CheckAnswer();
         answerCheck.isCorrect(1);
         
-        //creating and using objects
         Hint findingHint = new Hint();
         findingHint.getHint(grid);
+        
+        Run run = new Run();
+        run.displayNumbers();
+        run.displayTimer();
     }
     
 }

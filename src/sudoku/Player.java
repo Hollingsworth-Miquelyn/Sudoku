@@ -32,7 +32,7 @@ public class Player {
         System.out.println("You have won " + winLossRatio + "% of the games."
                 + wins + " wins and "
                 + losses + " losses");
+        return winLossRatio*100;
     }
-        
-        
-    }
+           
+}
