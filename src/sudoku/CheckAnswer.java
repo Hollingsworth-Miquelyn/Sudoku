@@ -11,17 +11,17 @@ package sudoku;
  * @author Jessica
  */
 public class CheckAnswer {
-    private String correct = "correct";
-    private String wrong = "wrong";
+    private String correct = "Correct Good Job";
+    private String wrong = "Wrong You Suck";
 
     public CheckAnswer () {
     }
     
     public void isCorrect(int answer){
         if(answer == 1) {
-            System.out.println("yes");
+            System.out.println(correct);
         } else {
-            System.out.println("no");
+            System.out.println(wrong);
         }
         
     }
