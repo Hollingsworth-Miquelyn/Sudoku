@@ -38,6 +38,5 @@ public class Player {
                 + losses + " losses");
         return winLossRatio*100;
     }
-        
-        
-    }
+           
+}
