@@ -24,7 +24,7 @@ public class Player {
     }
     
    
-    public void getWinningPercentage() {
+    public double getWinningPercentage() {
         double totalScore = wins + losses;
         
         double winLossRatio = wins / totalScore *100;
