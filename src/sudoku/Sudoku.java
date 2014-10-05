@@ -30,9 +30,6 @@ public class Sudoku {
         System.out.println(difficulty);
     }
     
-    public void displayDifficulty(){
-        System.out.println(this.difficulty);
-    }
     public void displayhighscore(){
         System.out.println(this.highScore);
     }
