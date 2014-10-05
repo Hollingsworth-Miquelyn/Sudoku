@@ -38,7 +38,6 @@ public class Sudoku {
         System.out.println("Please enter your name:");
         this.name = input.next();
     }
-    
     public void displayHelp(){
         System.out.println("\nWelcome " + this.name + "\n");
         System.out.println(this.help);
