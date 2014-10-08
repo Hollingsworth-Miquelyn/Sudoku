@@ -11,7 +11,7 @@ package sudoku;
  */
 public class Run {
     private String numbers = "1, 2, 3, 4, 5, 6, 7, 8, 9";
-    private String timer = "3 mintues 10 seconds";
+    public double timer = 3.17;
     
     public Run(){
         
