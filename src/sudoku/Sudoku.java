@@ -30,7 +30,7 @@ public class Sudoku {
         System.out.println(difficulty);
     }
     
-    public void displayhighscore(){
+    public void displaybestTime(){
         System.out.println(this.highScore);
     }
     public void getName(){
@@ -45,7 +45,7 @@ public class Sudoku {
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
         sudoku.displayDifficulty();
-        sudoku.displayhighscore();
+        sudoku.displaybestTime();
         sudoku.getName();
         sudoku.displayHelp();
         
