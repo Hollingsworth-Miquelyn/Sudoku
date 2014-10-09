@@ -11,7 +11,6 @@ package sudoku;
  * @author Miquelyn
  */
 public class MainMenu {
-      //private so that no one can chage the variables without permission
     private String help = "The instructions will go here.";
     private String exit = "Are you sure you want to exit the game?";
     
@@ -19,9 +18,9 @@ public class MainMenu {
     }
     
     public void displayInstructions(){
-        System.out.println(help);
+        System.out.println(this.help);
     }
     public void displayExit(){
-        System.out.println(exit);
+        System.out.println(this.exit);
     }
 }
