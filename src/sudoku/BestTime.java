@@ -32,7 +32,7 @@ public class BestTime {
             System.out.println("Bummer! \n" + "Invald Time");
         }
         else {
-            System.out.println("Contgradulations! \n" + "Your Time" + (int)totalTime);//int will only output the minutes can be taken out later
+            System.out.println("Contgradulations! \n" + "Your Time :" + (int)totalTime);//int will only output the minutes can be taken out later
         }
     }
     
