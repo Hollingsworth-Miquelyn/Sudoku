@@ -62,6 +62,15 @@ public class Sudoku {
         Run run = new Run();
         run.displayNumbers();
         run.displayTimer();
+        
+        MainMenu mainMenu = new MainMenu();
+        mainMenu.displayInstructions();
+        mainMenu.displayExit();
+        
+        BestTime bestTime = new BestTime();
+        bestTime.displayUserName();
+        bestTime.bestTime();
+        bestTime.displayTotalTime();
     }
     
 }
