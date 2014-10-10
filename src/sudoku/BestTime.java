@@ -14,8 +14,8 @@ public class BestTime {
     private String userName = "Miquelyn";
     private String totalTime = "6:25";
     private int topTen = 10;
-    private double seconds = .25;
-    private double minutes = 6;
+    private int seconds = 15;
+    private int minutes = 6;
     private int decimals = 60;
 
     public BestTime() {
@@ -26,13 +26,13 @@ public class BestTime {
         System.out.println(this.userName);
     }
     public void bestTime() {
-        double secondsDecimal = seconds / decimals;
-        double totalTime = minutes + secondsDecimal;
+        double secondsDecimal = (double)seconds / decimals;
+        double totalTime = (double)minutes + secondsDecimal;
         if (totalTime < 0 || totalTime > 100){
             System.out.println("Bummer! \n" + "Invald Time");
         }
         else {
-            System.out.println("Contgradulations! \n" + "Your Time" + (int)totalTime);//int will only output the minutes can be taken out later
+            System.out.println("Contgradulations! \n" + "Your Time" + totalTime);//int will only output the minutes can be taken out later
         }
     }
     
