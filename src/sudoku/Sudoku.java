@@ -16,7 +16,7 @@ import java.util.Scanner;
  */
 public class Sudoku {
     private String difficulty = "easy";
-    private int highScore = 135;
+    private double bestTime = 5.25;
     private String name = "Sian";
     private String help = "Fill the empty cells with numbers 1-9.\n" +
         "Each number can appear only once in each column and row.\n" +
@@ -31,7 +31,7 @@ public class Sudoku {
     }
     
     public void displaybestTime(){
-        System.out.println(this.highScore);
+        System.out.println(this.bestTime);
     }
     public void getName(){
         Scanner input = new Scanner(System.in);
