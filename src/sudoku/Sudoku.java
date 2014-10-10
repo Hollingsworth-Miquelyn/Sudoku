@@ -53,8 +53,9 @@ public class Sudoku {
         grid.displaySize();
         grid.displayPosition();
         
-        CheckAnswer answerCheck = new CheckAnswer();
-        answerCheck.isCorrect(1);
+        CheckAnswer checkAnswer = new CheckAnswer();
+        checkAnswer.checkAnswers();
+        
         
         Hint findingHint = new Hint();
         findingHint.getHint(grid);
