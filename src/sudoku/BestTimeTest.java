@@ -13,8 +13,8 @@ public class BestTimeTest {
     private String userName = "Miquelyn";
     private String totalTime = "6:25";
     private int topTen = 10;
-    private int seconds = 15;
-    private int minutes = 5;
+    private int seconds = 0;
+    private int minutes = 0;
     private int decimals = 60;
 
     public BestTimeTest() {
@@ -27,8 +27,9 @@ public class BestTimeTest {
     public void bestTime() {
         double secondsDecimal = (double)seconds / decimals;
         double totalTime = (double)minutes + secondsDecimal;
-        if (totalTime < 0 || totalTime > 100){
+        if (totalTime <= 0 || totalTime > 100 || seconds < 0){
             System.out.println("Bummer! \n" + "Invald Time");
+            System.out.println("The input was " + minutes + " minutes " + seconds + " seconds");
         }
         else {
             System.out.println("The input was " + minutes + " minutes " + seconds + " seconds");
