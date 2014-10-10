@@ -57,7 +57,7 @@ public class Sudoku {
         answerCheck.isCorrect(1);
         
         Hint findingHint = new Hint();
-        findingHint.getHint(grid);
+        int ourHint = findingHint.getHint(grid);
         
         Run run = new Run();
         run.displayNumbers();
