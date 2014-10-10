@@ -40,3 +40,4 @@ public class BestTime {
         System.out.println(this.totalTime);
     }
 }
+//This is a test throw away
