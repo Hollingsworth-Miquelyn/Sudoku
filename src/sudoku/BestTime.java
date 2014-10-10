@@ -28,7 +28,7 @@ public class BestTime {
     public void bestTime() {
         double secondsDecimal = (double)seconds / decimals;
         double totalTime = (double)minutes + secondsDecimal;
-        if (totalTime < 0 || totalTime > 100){
+        if (totalTime <= 0 || totalTime > 100 || seconds < 0){
             System.out.println("Bummer! \n" + "Invald Time");
         }
         else {
