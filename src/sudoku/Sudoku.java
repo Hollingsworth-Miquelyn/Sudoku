@@ -54,7 +54,7 @@ public class Sudoku {
         grid.displayPosition();
         
         CheckAnswer checkAnswer = new CheckAnswer();
-        checkAnswer.checkAnswers();
+        checkAnswer.checking();
         
         
         Hint findingHint = new Hint();
