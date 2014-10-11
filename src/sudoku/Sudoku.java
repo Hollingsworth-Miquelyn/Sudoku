@@ -9,10 +9,9 @@ package sudoku;
 import java.util.Scanner;
 
 
-
 /**
  *
- * @author Sian
+ * @author Miquelyn Hollingsworth, Jessica Marshall, Jessica West, Heidi Spackman
  */
 public class Sudoku {
     private String difficulty = "easy";
@@ -49,6 +48,12 @@ public class Sudoku {
         sudoku.getName();
         sudoku.displayHelp();
         
+        MainMenu mainMenu = new MainMenu();
+        
+        GridLayout gridFormat = new GridLayout(9,9);
+        gridFormat.setRows(9);
+        gridFormat.setColumns(9);
+                    
         Grid grid = new Grid();
         grid.displaySize();
         grid.displayPosition();
@@ -62,11 +67,7 @@ public class Sudoku {
         
         Run run = new Run();
         run.displayNumbers();
-        run.displayTimer();
-        
-        MainMenu mainMenu = new MainMenu();
-        mainMenu.displayInstructions();
-        mainMenu.displayExit();
+        run.displayTimer();        
         
         BestTime bestTime = new BestTime();
         bestTime.displayUserName();
