@@ -11,56 +11,66 @@ package sudoku;
  * @author Heidi Spackman Lesson3 (changed everything)
  */
 public class CheckAnswer {
-    private int row=5;
-    private int cell1=11;
-    private int cell2=8;
-    private int cell3=7;
-    private int cell4=-5;
-    private int cell5=9;
+    private int row=1;
+    private int cell1=1;
+    private int cell2=2;
+    private int cell3=3;
+    private int cell4=4;
+    private int cell5=5;
     private int cell6=6;
-    private int cell7=4;
-    private int cell8=2;
-    private int cell9=3;	
+    private int cell7=7;
+    private int cell8=8;
+    private int cell9=9;	
     public int cellanswer;
-
+    public boolean b;
 
     public CheckAnswer() {
     }
     
     public void checking(){
         
-        //for (row = 1; row<10; row++){
+      
             if(cell1 < 1){ 
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-            }
+                b = false;
+                }
                 else if (cell2 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
                 else if (cell3 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
                 else if (cell4 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
                 else if (cell5 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
                 else if (cell6 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
                 else if (cell7 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
                 else if (cell8 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
                 else if (cell9 < 1){
                 System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                b = false;
                 }
-                else {}
-                   for (row = 1; row<10; row++){
+                else {
+                
+                   
                         cellanswer = cell1+cell2+cell3+cell4+cell5+cell6+cell7+cell8+cell9;
-                        if (cellanswer==45){
+                        if (cellanswer == 45 & b == false){
                              System.out.println("Row " + row + " Correct!");
                         }
                             else {
@@ -69,12 +79,11 @@ public class CheckAnswer {
                         System.out.println(cellanswer);
                     }
         
-                
+            }
        } 
 
    
-    }
+    
 
-//}
         
     
