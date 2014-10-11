@@ -10,9 +10,9 @@ package sudoku;
  */
 public class Player {
     
-    public long wins = 0;
-    public long losses = 0;
-    public String marker;
+    private int wins = 5;
+    private int gamesPlayed = 7;
+    private String marker;
     
     
 
@@ -25,14 +25,20 @@ public class Player {
     
    
     public double getWinningPercentage() {
-        double totalScore = wins + losses;
+               
+        double winRatio = (double) wins / gamesPlayed *100;
         
-        double winLossRatio = wins / totalScore *100;
-        
-        System.out.println("You have won " + winLossRatio + "% of the games."
-                + wins + " wins and "
-                + losses + " losses");
-        return winLossRatio*100;
+        if (winRatio < 0 || winRatio > 100 || gamesPlayed <= 0 ){
+          
+            System.out.println("Oops! \n" + "Invalid Amount");
+        }
+        else {
+
+        System.out.println("Great Job!\n" + "You have won " + winRatio + "% of your games. \n"
+                + wins + " Wins and "
+                + gamesPlayed + " games played.");
+        return winRatio*100;}
+        return 0;
     }
            
 }
