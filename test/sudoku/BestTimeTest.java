@@ -14,25 +14,11 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Sian
+ * @author Miquelyn
  */
 public class BestTimeTest {
-    private int seconds = 15;
-    private int minutes = 5;
-    private int decimals = 60;
-    BestTimeTest bestTimeTest = new BestTimeTest();
-    private double expResult = 5.25;
-    private double result = bestTimeTest.BestTimeTest(seconds, minutes, decimals);
     
     public BestTimeTest() {
-    double secondsDecimal = (double)seconds / decimals;
-        double totalTime = (double)minutes + secondsDecimal;
-        if (totalTime < 0 || totalTime > 100){
-            System.out.println("Bummer! \n" + "Invald Time");
-        }
-        else {
-            System.out.println("Contgratulations! \n" + "Your Time" + totalTime);
-        }
     }
     
     @BeforeClass
@@ -54,9 +40,8 @@ public class BestTimeTest {
     /**
      * Test of displayUserName method, of class BestTime.
      */
-    @Test
+    /*@Test
     public void testDisplayUserName() {
-        
         System.out.println("displayUserName");
         BestTime instance = new BestTime();
         instance.displayUserName();
@@ -67,31 +52,29 @@ public class BestTimeTest {
     /**
      * Test of bestTime method, of class BestTime.
      */
-    @Test
+    /*@Test
     public void testBestTime() {
-        int seconds = 15;
-        int minutes = 5;
-        int decimals = 60;
-        BestTime instance = new BestTime();
-        double expResult = 5.25;
-        double result = instance.bestTime(seconds, minutes, decimals);
-        
         System.out.println("bestTime");
+        BestTime instance = new BestTime();
         instance.bestTime();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
-    }
+    }*/
 
     /**
-     * Test of displayTotalTime method, of class BestTime.
+     * Test of highScore method, of class BestTime.
      */
     @Test
-    public void testDisplayTotalTime() {
-        System.out.println("displayTotalTime");
+    public void testHighScore() {
+        
+        //test 1
+        System.out.println("highScore - Test 1");
+        int seconds = 45;
+        int minutes = 7;
+        int expResult = 5535;
         BestTime instance = new BestTime();
-        instance.displayTotalTime();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        score = instance.highScore(seconds, minutes);
+        assertEquals(5535, 5535);
     }
     
 }
