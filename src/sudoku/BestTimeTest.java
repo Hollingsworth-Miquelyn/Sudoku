@@ -13,8 +13,8 @@ public class BestTimeTest {
     private String userName = "Miquelyn";
     private String totalTime = "6:25";
     private int topTen = 10;
-    private int seconds = 0;
-    private int minutes = 0;
+    private int seconds = 15;
+    private int minutes = 5;
     private int decimals = 60;
 
     public BestTimeTest() {
@@ -37,12 +37,18 @@ public class BestTimeTest {
         }
     }
     
-    public void displayTotalTime() {
-        System.out.println(this.totalTime);
-    }
-    
-    public static void main(String[] args){
-        BestTimeTest btt = new BestTimeTest();
-        btt.bestTime();
+    public void highScore(){
+        int seconds = 7;
+        int minutes = 45;
+        int maxScore = 6000;
+        double minutesConversion = (double)minutes * 60;
+        double totalTime = (double)seconds + minutesConversion;
+        if (totalTime <= 0 || totalTime > 100 || seconds < 0){
+            System.out.println("Bummer! \n" + "Invald Time");
+        }
+        else {
+            int score = maxScore - (int)totalTime;
+            System.out.println("Congratulations! \n Your game score is " + score + "!");
+        }    
     }
 }
