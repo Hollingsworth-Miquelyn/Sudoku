@@ -72,7 +72,7 @@ public class Sudoku {
         BestTime bestTime = new BestTime();
         bestTime.displayUserName();
         bestTime.bestTime();
-        bestTime.displayTotalTime();
+        bestTime.highScore();
         
         Player player = new Player();
         player.getWinningPercentage();
