@@ -14,14 +14,14 @@ public class BestTime {
     private String userName = "Miquelyn";
     private String totalTime = "6:25";
     private int topTen = 10;
-    private int seconds = 15;
-    private int minutes = 6;
+    private int seconds = 0;
+    private int minutes = 0;
     private int decimals = 60;
 
     public BestTime() {
         
     }
-    
+    //This will pull the username from the intial username input
     public void displayUserName() {
         System.out.println(this.userName);
     }
@@ -36,8 +36,16 @@ public class BestTime {
         }
     }
     
-    public void displayTotalTime() {
-        System.out.println(this.totalTime);
+    public void highScore(){
+        int maxScore = 6000;
+        double minutesConversion = (double)minutes * 60;
+        double totalTime = (double)seconds + minutesConversion;
+        if (totalTime <= 0 || totalTime > 6000 || seconds < 0){
+            System.out.println("Sorry! \n" + "Invalid input.");
+        }
+        else {
+            int score = maxScore - (int)totalTime;
+            System.out.println("Congratulations! \nYour game score is " + score + "!");
+        }    
     }
 }
-//This is a test throw away
