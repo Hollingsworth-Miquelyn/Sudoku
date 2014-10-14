@@ -49,11 +49,7 @@ public class Sudoku {
         sudoku.displayHelp();
         
         MainMenu mainMenu = new MainMenu();
-        
-        GridLayout gridFormat = new GridLayout(9,9);
-        gridFormat.setRows(9);
-        gridFormat.setColumns(9);
-                    
+            
         Grid grid = new Grid();
         grid.displaySize();
         grid.displayPosition();
