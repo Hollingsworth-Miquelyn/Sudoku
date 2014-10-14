@@ -63,6 +63,17 @@ public class Sudoku {
         helpMenuControl.displayError();
         helpMenuControl.displayHelpBorder();
         
+        GameHelpMenuView gameHelpMenuView = new GameHelpMenuView();
+        gameHelpMenuView.getInput();
+        gameHelpMenuView.display();
+        
+        GameHelpMenuControl gameHelpMenuControl = new GameHelpMenuControl();
+        gameHelpMenuControl.displayObjectiveHelp();
+        gameHelpMenuControl.displayThreeHelp();
+        gameHelpMenuControl.displayNineHelp();
+        gameHelpMenuControl.displayError();
+        gameHelpMenuControl.displayHelpBorder();
+                
         Board grid = new Board();
         grid.displaySize();
         grid.displayPosition();

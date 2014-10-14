@@ -7,7 +7,7 @@ package sudoku;
 
 /**
  *
- * @author Rylan
+ * @author Group of Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessica Marshall
  */
 public class HelpMenuControl  {
     
@@ -52,10 +52,9 @@ public class HelpMenuControl  {
         displayHelpBorder();     
         System.out.println( 
                  "\tThe objective of the game is to place the numbers 1 through 9 in the empty cells. "
-                + "\n\tEach number can appear only once in each column and row.\n"
+                + "\n\tEach number can appear only once in each column and row."
                 + "\n\tEach number can appear only once in each 3x3 sub-square."
 
-                + "\n\t The first player to get \"three-in-a-row\" is the winner."
                 ); 
         displayHelpBorder();
     }
@@ -78,9 +77,9 @@ public class HelpMenuControl  {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-               "\tA symbol that \"marks\" the locations in the board that are occupied "
-                + "by a player. "
-                + "\n\tThe default markers are \"X\" and \"O\"."
+               "\tA number that must be used in the grid "
+                + "\n\thas to be a number from one to nine.  "
+                + "\n\tExample: 1,2,3,4,5,6,7,8,9."
                 ); 
         displayHelpBorder();
     }
