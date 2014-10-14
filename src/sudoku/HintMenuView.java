@@ -9,25 +9,21 @@ import java.util.Scanner;
 
 /**
  *
- * @author Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessical Marshall
+ * @Jessical Marshall
  */
-public class HelpMenuView {
+public class HintMenuView {
    
         
-    static final String[][] menuItems = {
-        {"B", "The Board"},
-        {"G", "Sudoku Instructions"},
-        {"S", "Score"},
-        {"D", "Difficulty Help"},
+    private final static String[][] menuItems = {
         {"H", "Hint Help"},
         {"Q", "Quit Help"}        
     };
     
     // Create instance of the HelpMenuControl (action) class
-    private HelpMenuControl helpMenuControl = new HelpMenuControl();
+    private HelpMenuControl hintMenuControl = new HelpMenuControl();
     
     // default constructor
-    public HelpMenuView() {
+    public HintMenuView() {
         
     } 
     
@@ -45,21 +41,9 @@ public class HelpMenuView {
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
-            switch (command) {
-                case "B":
-                    this.helpMenuControl.displayBoardHelp();
-                    break;
-                case "G":
-                    this.helpMenuControl.displayGameHelp();
-                    break;                  
-                case "S":
-                    this.helpMenuControl.displayScoreHelp();
-                    break; 
-                case "D":
-                    this.helpMenuControl.displayDifficultyHelp();
-                    break; 
+            switch (command) {                
                 case "H":
-                    this.helpMenuControl.displayHintHelp();
+                    this.hintMenuControl.displayHintHelp();
                     break;
                 case "Q": 
                     break;
@@ -77,11 +61,10 @@ public class HelpMenuView {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < HelpMenuView.menuItems.length; i++) {
+        for (int i = 0; i < HintMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
     }
   
 }
-    

@@ -40,9 +40,8 @@ public class HelpMenuControl  {
         System.out.println();
         this.displayHelpBorder();             
         System.out.println( 
-                "\tThe game board for Sudoku consist of a 9x9 grid"
-                + "\n\twith nine 3x3 subgrids. A Player fills in all empty cells wtih "
-                + "\n\t1 through 9.");
+                "\tIf player becomes stuck while playing press the Hint button"
+                + "\n\tand the board will automatically fill in one cell for you.");
         displayHelpBorder();
     }
      
