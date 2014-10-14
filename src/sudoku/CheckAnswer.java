@@ -11,16 +11,16 @@ package sudoku;
  * @author Heidi Spackman Lesson3 (changed everything)
  */
 public class CheckAnswer {
-    private int row=1;
-    private int cell1=1;
-    private int cell2=2;
+    private int row=8;
+    private int cell1=90;
+    private int cell2=-1;
     private int cell3=3;
     private int cell4=4;
     private int cell5=5;
-    private int cell6=6;
-    private int cell7=7;
-    private int cell8=8;
-    private int cell9=9;	
+    private int cell6=7;
+    private int cell7=9;
+    private int cell8=6;
+    private int cell9=2;	
     public int cellanswer;
     public boolean b;
 

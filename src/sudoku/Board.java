@@ -9,12 +9,12 @@ package sudoku;
  *
  * @author Sian
  */
-public class Grid {
+public class Board {
     //private so that no one can chage the variables without permission
     private int size = 81;
     private int position = 3;
     
-    public Grid(){
+    public Board(){
         
     }
     

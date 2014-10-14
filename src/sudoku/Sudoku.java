@@ -50,11 +50,20 @@ public class Sudoku {
         
         MainMenu mainMenu = new MainMenu();
         
-        GridLayout gridFormat = new GridLayout(9,9);
-        gridFormat.setRows(9);
-        gridFormat.setColumns(9);
-                    
-        Grid grid = new Grid();
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.getInput();
+        helpMenuView.display();
+      
+        HelpMenuControl helpMenuControl = new HelpMenuControl();
+        helpMenuControl.displayBoardHelp();
+        helpMenuControl.displayDifficultyHelp();
+        helpMenuControl.displayHintHelp();        
+        helpMenuControl.displayGameHelp();
+        helpMenuControl.displayScoreHelp();
+        helpMenuControl.displayError();
+        helpMenuControl.displayHelpBorder();
+        
+        Board grid = new Board();
         grid.displaySize();
         grid.displayPosition();
         
