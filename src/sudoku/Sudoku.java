@@ -49,8 +49,32 @@ public class Sudoku {
         sudoku.displayHelp();
         
         MainMenu mainMenu = new MainMenu();
-            
-        Grid grid = new Grid();
+        
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.getInput();
+        helpMenuView.display();
+      
+        HelpMenuControl helpMenuControl = new HelpMenuControl();
+        helpMenuControl.displayBoardHelp();
+        helpMenuControl.displayDifficultyHelp();
+        helpMenuControl.displayHintHelp();        
+        helpMenuControl.displayGameHelp();
+        helpMenuControl.displayScoreHelp();
+        helpMenuControl.displayError();
+        helpMenuControl.displayHelpBorder();
+        
+        GameHelpMenuView gameHelpMenuView = new GameHelpMenuView();
+        gameHelpMenuView.getInput();
+        gameHelpMenuView.display();
+        
+        GameHelpMenuControl gameHelpMenuControl = new GameHelpMenuControl();
+        gameHelpMenuControl.displayObjectiveHelp();
+        gameHelpMenuControl.displayThreeHelp();
+        gameHelpMenuControl.displayNineHelp();
+        gameHelpMenuControl.displayError();
+        gameHelpMenuControl.displayHelpBorder();
+                
+        Board grid = new Board();
         grid.displaySize();
         grid.displayPosition();
         
