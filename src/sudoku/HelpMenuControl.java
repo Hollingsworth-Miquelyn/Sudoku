@@ -66,9 +66,9 @@ public class HelpMenuControl  {
         System.out.println();
         displayHelpBorder();     
         System.out.println( 
-               "\tA symbol that \"marks\" the locations in the board that are occupied "
-                + "by a player. "
-                + "\n\tThe default markers are \"X\" and \"O\"."
+               "\n\tEach second is worth 1 point. You start with 6,000 points. "
+                + "\n\tFor every second it takes you to complete the game, the "
+                + "\n\tscore will decrease 1 point.."
                 ); 
         displayHelpBorder();
     }

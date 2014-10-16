@@ -17,9 +17,6 @@ public class Sudoku {
     private String difficulty = "easy";
     private double bestTime = 5.25;
     private String name = "Sian";
-    private String help = "Fill the empty cells with numbers 1-9.\n" +
-        "Each number can appear only once in each column and row.\n" +
-        "Each number can appear only once in each 3x3 sub-square.";
 
     public Sudoku(){
         
@@ -39,7 +36,6 @@ public class Sudoku {
     }
     public void displayHelp(){
         System.out.println("\nWelcome " + this.name + "\n");
-        System.out.println(this.help);
     }
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
@@ -48,7 +44,9 @@ public class Sudoku {
         sudoku.getName();
         sudoku.displayHelp();
         
-        MainMenu mainMenu = new MainMenu();
+        MainMenuView mainMenu = new MainMenuView();
+        mainMenu.getInput();
+        mainMenu.display();
         
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.getInput();
