@@ -7,24 +7,65 @@ package sudoku;
 
 /**
  *
- * @author Sian
+ * @author Miquelyn Hollingsworth, Jessical Marshall, Jessica West, Heidi Spackman
+ */
+import java.awt.Point;
+
+/**
+ *
+ * @author jacksonrkj
  */
 public class Board {
-    //private so that no one can chage the variables without permission
-    private int size = 81;
-    private int position = 3;
-    
-    public Board(){
-        
-    }
-    
-    public void displaySize(){
-        System.out.println(this.size);
-    }
-    
-    public void displayPosition(){
-        System.out.println(this.position);
-    }
-}
 
+    public int rowCount = 9;
+    public int columnCount = 9;
+   
+    public Location[][] boardLocations;
+
+    public Board() {
+    }
+
+    public Board(int noRows, int noColumns) {
+  
+        this.createBoardLocations(noRows, noColumns);
+    }
+
+
+    public void createBoardLocations(int noRows, int noColumns) {
+        this.rowCount= noRows;
+        this.columnCount= noColumns;
+        
+        // add locations to the board
+        this.boardLocations = new Location[noRows][noColumns];
+        for (int row = 0; row < noRows; row++) { // for every row
+            // for every column in the row
+            for (int column = 0; column < noColumns; column++) { 
+                this.boardLocations[row][column] = new Location();           
+            }            
+        }   
+    }
     
+    
+    public void clearTheBoard() {
+        // add locations to the board
+        for (int row = 0; row < this.rowCount; row++) {
+            for (int column = 0; column < this.columnCount; column++) {
+                Location location = this.boardLocations[row][column];
+                location.player = null;           
+            }            
+        }    
+    }
+
+    public void occupyLocation(Player player, int row, int column) {
+        Location location = this.boardLocations[row][column];
+        
+        if ( location.player != null) { // location already occupied
+            new SudokuError().displayError("This location is already occupied. "
+                    + "Try a different location.");
+        }
+        
+        location.player = player;
+    }
+
+
+}

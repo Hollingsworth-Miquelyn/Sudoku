@@ -12,7 +12,7 @@ public class Player {
     
     private int wins = 5;
     private int gamesPlayed = 7;
-    private String marker;
+    public String marker;
     
     
 

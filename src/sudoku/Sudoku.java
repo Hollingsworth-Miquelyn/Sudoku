@@ -86,8 +86,8 @@ public class Sudoku {
         
         
         Board grid = new Board();
-        grid.displaySize();
-        grid.displayPosition();
+        
+        Location location = new Location();
         
         CheckAnswer checkAnswer = new CheckAnswer();
         checkAnswer.checking();
@@ -104,9 +104,11 @@ public class Sudoku {
         bestTime.displayUserName();
         bestTime.bestTime();
         bestTime.highScore();
+             
         
         Player player = new Player();
         player.getWinningPercentage();
+        
         
 
     }
