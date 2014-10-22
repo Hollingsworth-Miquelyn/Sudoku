@@ -10,5 +10,7 @@ package sudoku;
  * @author Miquelyn Hollingsworth, Jessical Marshall, Jessica West, Heidi Spackman
  */
 public class Game {
+    public Board board;
+    
     
 }
