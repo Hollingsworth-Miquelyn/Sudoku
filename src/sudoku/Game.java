@@ -12,5 +12,4 @@ package sudoku;
 public class Game {
     public Board board;
     
-    
 }

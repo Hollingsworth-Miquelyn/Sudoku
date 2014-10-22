@@ -18,7 +18,17 @@ public class Run {
     }
     
     public void displayNumbers(){
-        System.out.println(this.numbers);
+        int t; 
+    int i;
+    int table [] [] = new int [9][9];
+    
+    for(t=0; t < 9; ++t){
+        for(i=0; i < 9; ++i) {
+            table[t][i] = (t*4) +i+1;
+            System.out.print(table [t][i] + " ");
+        }
+        System.out.println();
+}
     }
     
     public void displayTimer(){
