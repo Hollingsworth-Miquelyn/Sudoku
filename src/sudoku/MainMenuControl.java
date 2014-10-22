@@ -1,5 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
+  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -17,7 +17,7 @@ public void newGame() {
                 "\tThis will start the New Game Menu"
                 );
     }        
-          
+    
     public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.getInput();

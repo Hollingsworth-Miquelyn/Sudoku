@@ -19,7 +19,7 @@ public class HelpMenuView {
         {"G", "Sudoku Instructions"},
         {"S", "Score"},
         {"D", "Difficulty Help"},
-        {"H", "Hint Help"},
+        {"H", "Hint"},
         {"Q", "Quit Help"}        
     };
     

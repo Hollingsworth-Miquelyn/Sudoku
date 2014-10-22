@@ -10,10 +10,9 @@ import java.util.Random;
 
 /**
  *
- * @author Jessica
+ * @author Jessica Marshall
  */
 public class Hint {
-    private String Hint = "1";
     
     public int getHint(Board referanceGrid){
         Random randomRow = new Random();
@@ -41,7 +40,7 @@ public class Hint {
                                   {0, 0, 0, 1, 0, 0, 9, 0, 7}};
                 
         //We will get the board from referanceGrid that is passed from grid class
-        double hint = 0;
+        int hint = 0;
         int randomRowNumber = 0;
         int randomColumnNumber = 0;
         boolean foundHint = false;
@@ -64,9 +63,10 @@ public class Hint {
         int displayedRowNumber = randomRowNumber + 1; // must add one because matrix begins at zero and will now display correct row and column to user
         int displayedColumnNumber = randomColumnNumber + 1;
         
-        String hintDisplay = "For Row " + displayedRowNumber + " And Column " + displayedColumnNumber + " the answer is \"" + hint + "\" \n Enjoy your hint";
+        String hintDisplay = "For Row " + displayedRowNumber + " And Column " + displayedColumnNumber + " the answer is " + hint;
         System.out.println(hintDisplay);
         
         return (int)hint;
+                
     }
 }

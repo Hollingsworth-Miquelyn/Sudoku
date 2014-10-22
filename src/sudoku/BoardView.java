@@ -34,7 +34,7 @@ public class BoardView {
         return;
     }
 
-    private void printHeadRow() {
+    public void printHeadRow() {
 
         // print the first column in the header row
         System.out.print("\n\t      1   ");
@@ -49,7 +49,7 @@ public class BoardView {
         System.out.print(" " + columnsInRow + "   ");
     }
 
-    private void printDividerRow() {
+    public void printDividerRow() {
 
         // print the divider for the first column in the row
         System.out.print("\n\t  |------");
@@ -63,7 +63,7 @@ public class BoardView {
         System.out.print("-----|");
     }
 
-    private void printRow(int rowNumber, Location[] rowLocations) {
+    public void printRow(int rowNumber, Location[] rowLocations) {
         
         // print contents of first column in the row
         String letter = " ";

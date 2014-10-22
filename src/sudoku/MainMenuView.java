@@ -15,7 +15,7 @@ public class MainMenuView {
     private static final String[][] menuItems = {
         {"N", "New Game"},
         {"H", "Help"},
-        {"X", "Exit Sudoku"}
+        {"X", "Exit Sudoku"}      
     }; 
   
     MainMenuControl mainMenuControl = new MainMenuControl();
