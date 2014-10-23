@@ -46,13 +46,18 @@ public class BestTime {
         if(pastScores[i] > max) max = pastScores[i];
         }
         
-        if (pastScores.length > 1) { // the value entered was not blank?
-                System.out.println("Your best time is " + min 
+          
+        if (pastScores.length > 1) {
+                if (min <= 0 ) { 
+                    System.out.println("Invalid Amount");
+                } 
+                else {
+                    System.out.println("Your best time is " + min 
                 + " minutes and your worst time is " + max + " minutes");
-                
-            }    
-
-            else if (pastScores.length <= 1) { // only one score entered?
+                    
+                }
+            }
+            else if (pastScores.length <= 1 || min < 0) { // only one score entered?
                 if (pastScores.length == 1) { 
                     System.out.println("Your best time is " + min);
                 } 

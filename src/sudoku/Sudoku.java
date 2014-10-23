@@ -99,6 +99,7 @@ public class Sudoku {
         BestTime bestTime = new BestTime();
         bestTime.displayUserName();
         bestTime.bestTime();
+        bestTime.bestScore();
         bestTime.highScore();
              
         
