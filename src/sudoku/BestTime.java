@@ -29,13 +29,40 @@ public class BestTime {
         double secondsDecimal = (double)seconds / decimals;
         double totalTime = (double)minutes + secondsDecimal;
         if (totalTime <= 0 || totalTime > 100 || seconds < 0){
-            System.out.println("Bummer! \n" + "Invald Time");
+            System.out.println("Bummer! \n" + "Invalid Time");
         }
         else {
-            System.out.println("Contgradulations! \n" + "Your Time" + totalTime);//int will only output the minutes can be taken out later
+            System.out.println("Contgratulations! \n" + "Your Time" + totalTime);//int will only output the minutes can be taken out later
         }
     }
     
+    public void bestScore() {
+        double pastScores[] = {15.06, 19.25, 8.09, 12.09, 20.09};
+        double min, max;
+        min = max = pastScores[0];
+        
+        for(int i = 1; i < pastScores.length; i++) {
+        if(pastScores[i] < min) min = pastScores[i];
+        if(pastScores[i] > max) max = pastScores[i];
+        }
+        
+        if (pastScores.length > 1) { // the value entered was not blank?
+                System.out.println("Your best time is " + min 
+                + " minutes and your worst time is " + max + " minutes");
+                
+            }    
+
+            else if (pastScores.length <= 1) { // only one score entered?
+                if (pastScores.length == 1) { 
+                    System.out.println("Your best time is " + min);
+                } 
+                else { // not enough scores
+                    new SudokuError().displayError(
+                        "Not enough scores to display best time");
+                    
+                }
+            }
+    }
     public void highScore(){
         int maxScore = 6000;
         double minutesConversion = (double)minutes * 60;
