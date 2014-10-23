@@ -32,7 +32,11 @@ public class HelpMenuControl  {
         System.out.println( 
                 "\tThe game board for Sudoku consist of a 9x9 grid"
                 + "\n\twith nine 3x3 subgrids. A Player fills in all empty cells wtih "
-                + "\n\t1 through 9.");
+                + "\n\t1 through 9. When a level is chosen, numbers are filled into the"
+                + "\n\tplaying board. The user then fills in the rest of the board."
+                + "\n\tEasy: 28 cells filled"
+                + "\n\tMedium: 24 cells filled"
+                + "\n\tHard: 20 cells filled");
         displayHelpBorder();
     }
     //Jessica Marshall Lesson 4 Individual Function

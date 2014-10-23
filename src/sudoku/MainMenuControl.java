@@ -12,10 +12,8 @@ package sudoku;
 public class MainMenuControl {
     
 public void newGame() {
-        System.out.println();        
-        System.out.println( 
-                "\tThis will start the New Game Menu"
-                );
+        NewGameView newGame = new NewGameView();
+        newGame.getInput();
     }        
     
     public void displayHelpMenu() {

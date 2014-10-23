@@ -16,39 +16,30 @@ import java.util.Scanner;
 public class Sudoku {
     private String difficulty = "easy";
     private double bestTime = 5.25;
-    private String name = "Sian";
+    private String name;
 
     public Sudoku(){
         
     }
     
-    public void displayDifficulty(){
-        System.out.println(difficulty);
-    }
-    
-    public void displaybestTime(){
-        System.out.println(this.bestTime);
-    }
     public void getName(){
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter your name:");
         this.name = input.next();
     }
-    public void displayHelp(){
+    public void displayWelcomeUser(){
         System.out.println("\nWelcome " + this.name + "\n");
     }
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
-        sudoku.displayDifficulty();
-        sudoku.displaybestTime();
         sudoku.getName();
-        sudoku.displayHelp();
+        sudoku.displayWelcomeUser();
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
         mainMenu.display();
         
-        HelpMenuView helpMenuView = new HelpMenuView();
+        /*HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.getInput();
         helpMenuView.display();
       
@@ -82,10 +73,13 @@ public class Sudoku {
         difficultyHelpMenuControl.displayHelpMedium();
         difficultyHelpMenuControl.displayHelpEasy();
         
-        difficultyHelpMenuControl.displayHelpBorder();
+        difficultyHelpMenuControl.displayHelpBorder();*/
         
         
         Board grid = new Board();
+        grid.createBoardLocations(9, 9);
+        grid.clearTheBoard();
+        //grid.occupyLocation(null, row, column);
         
         Location location = new Location();
         

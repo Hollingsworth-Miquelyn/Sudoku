@@ -6,66 +6,70 @@
 package sudoku;
 
 import java.util.Scanner;
+import static sudoku.HelpMenuView.menuItems;
 /**
  *
  * @author Miquelyn Hollingsworth
  */
-public class MainMenuView {
+public class NewGameView {
     
-    private static final String[][] menuItems = {
-        {"N", "New Game"},
-        {"H", "Help"},
-        {"Q", "Quit Sudoku"}      
-    }; 
-  
-    MainMenuControl mainMenuControl = new MainMenuControl();
+    static final String[][] menuItems = {
+        {"E", "Level Easy"},
+        {"M", "Level Medium"},
+        {"H", "Level Hard"},
+        {"Q", "Quit New Game"},
+    };
+    //create instance of the NewGameControl (action) class
+    private NewGameControl newGameControl = new NewGameControl();
     
-    public MainMenuView() {
-
+    //default constructor
+    public NewGameView() {
+        
     }
- 
     
-    public void getInput() {       
-
-        String command;
+    //display new game menu and get end users input selection
+   public void getInput() {
+       
+    String command;
         Scanner inFile = new Scanner(System.in);
         
         do {
+            
             this.display(); // display the menu
-
+            
             // get commaned entered
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             
             switch (command) {
-                case "N":
-                    this.mainMenuControl.newGame();
+                case "E":
+                    this.newGameControl.startEasyGame();
+                    break;
+                case "M":
+                    this.newGameControl.startMediumGame();
                     break;
                 case "H":
-                    this.mainMenuControl.displayHelpMenu();            
+                    this.newGameControl.startHardGame();
                     break;
                 case "Q":
                     break;
-                default: 
+                default:
                     new SudokuError().displayError("Invalid command. Please enter a valid command.");
-                    continue;                    
+                    continue;
             }
         } while (!command.equals("Q"));
-
+        
         return;
-    }
-    
-
-    
-    
+        }
+   
+   //displays the new game menu
    public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < MainMenuView.menuItems.length; i++) {
+        for (int i = 0; i < NewGameView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
-    }   
-    
+    }
 }
