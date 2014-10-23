@@ -91,8 +91,10 @@ public class Sudoku {
         int ourHint = findingHint.getHint(grid);
         
         Run run = new Run();
-        run.displayNumbers();
-        run.displayTimer();        
+        //run.displayNumbers();
+        //run.displayTimer();
+        run.emptyEasyBoard();
+        
         
         BestTime bestTime = new BestTime();
         bestTime.displayUserName();
