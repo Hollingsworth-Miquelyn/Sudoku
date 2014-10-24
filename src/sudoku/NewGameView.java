@@ -6,7 +6,7 @@
 package sudoku;
 
 import java.util.Scanner;
-import static sudoku.HelpMenuView.menuItems;
+
 /**
  *
  * @author Miquelyn Hollingsworth

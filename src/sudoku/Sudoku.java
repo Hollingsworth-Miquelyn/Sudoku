@@ -84,16 +84,17 @@ public class Sudoku {
         Location location = new Location();
         
         CheckAnswer checkAnswer = new CheckAnswer();
+        checkAnswer.answerTest();
         checkAnswer.checking();
         
         
         Hint findingHint = new Hint();
         int ourHint = findingHint.getHint(grid);
         
-        Run run = new Run();
+        //Run run = new Run(9,9);
         //run.displayNumbers();
-        //run.displayTimer();
-        run.emptyEasyBoard();
+        //run.displayTimer();  
+        //run.displayBoard(9);
         
         
         BestTime bestTime = new BestTime();

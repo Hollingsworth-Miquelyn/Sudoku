@@ -17,6 +17,7 @@ public class NewGameControl {
     
     public void startEasyGame() {
         System.out.println("This will start a Level Easy game.");
+        
     }
     
     public void startMediumGame() {

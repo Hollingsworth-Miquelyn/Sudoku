@@ -14,6 +14,7 @@ import java.util.Random;
  */
 public class Hint {
     
+    
     public int getHint(Board referanceGrid){
         Random randomRow = new Random();
         Random randomColumn = new Random();
