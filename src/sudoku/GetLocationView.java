@@ -21,7 +21,7 @@ public class GetLocationView {
     
     /*
      * Prompt the user to enter the location (row and column) to place their 
-     * marker on the board
+     * number on the board
      * @Param game the object representing the game
      */
     public Point getInput() {

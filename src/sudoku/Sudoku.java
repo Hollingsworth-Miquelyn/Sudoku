@@ -87,6 +87,8 @@ public class Sudoku {
         checkAnswer.answerTest();
         checkAnswer.checking();
         
+        Boardhint boardhint = new Boardhint();
+        boardhint.finum();
         
         Hint findingHint = new Hint();
         int ourHint = findingHint.getHint(grid);
