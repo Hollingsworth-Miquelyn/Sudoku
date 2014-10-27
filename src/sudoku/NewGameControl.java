@@ -16,15 +16,23 @@ public class NewGameControl {
     }
     
     public void startEasyGame() {
-        System.out.println("This will start a Level Easy game.");
-        
+        PlayGameView playGame = new PlayGameView();
+        Board userBoard = new Board();
+        userBoard.setBoard("E");
+        playGame.getInput(userBoard);
     }
     
     public void startMediumGame() {
-        System.out.println("This will start a Level Hard game.");
+        PlayGameView playGame = new PlayGameView();
+        Board userBoard = new Board();
+        userBoard.setBoard("M");
+        playGame.getInput(userBoard);
     }
     
     public void startHardGame() {
-        System.out.println("This will start a Level Hard game.");
+        PlayGameView playGame = new PlayGameView();
+        Board userBoard = new Board();
+        userBoard.setBoard("H");
+        playGame.getInput(userBoard);
     }
 }

@@ -25,7 +25,7 @@ public class DifficultyHelpMenuView {
         
     } 
     
-    public void getInput() {       
+    public String getInput() {       
               
         String command;
         Scanner inFile = new Scanner(System.in);
@@ -55,7 +55,7 @@ public class DifficultyHelpMenuView {
             }
         } while (!command.equals("Q"));  
         
-         return;
+         return command;
     }
 
     public final void display() {

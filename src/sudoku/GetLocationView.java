@@ -13,7 +13,7 @@ import java.util.Scanner;
  * @author  Miquelyn Hollingsworth, Jessical Marshall, Jessica West, Heidi Spackman
  */
 public class GetLocationView {
-    private Game game;
+    /*private Game game;
     
     public GetLocationView(Game game) {
         this.game = game;
@@ -23,7 +23,7 @@ public class GetLocationView {
      * Prompt the user to enter the location (row and column) to place their 
      * number on the board
      * @Param game the object representing the game
-     */
+     
     public Point getInput() {
 
         Scanner inFile = new Scanner(System.in); // get input file      
@@ -110,8 +110,7 @@ public class GetLocationView {
         }
         
         return location; 
-            
-    }
-
+           
+    }*/ 
 }
 

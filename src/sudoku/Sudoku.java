@@ -30,6 +30,7 @@ public class Sudoku {
     public void displayWelcomeUser(){
         System.out.println("\nWelcome " + this.name + "\n");
     }
+    
     public static void main(String[] args) {
         Sudoku sudoku = new Sudoku();
         sudoku.getName();
@@ -37,7 +38,7 @@ public class Sudoku {
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
-        mainMenu.display();
+        //mainMenu.display();
         
         /*HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.getInput();
@@ -61,10 +62,10 @@ public class Sudoku {
         gameHelpMenuControl.displayThreeHelp();
         gameHelpMenuControl.displayNineHelp();
         gameHelpMenuControl.displayError();
-        gameHelpMenuControl.displayHelpBorder();
+        gameHelpMenuControl.displayHelpBorder();*/
                 
-        DifficultyHelpMenuView difficultyHelpMenuView = new DifficultyHelpMenuView();
-        difficultyHelpMenuView.getInput();
+        /*DifficultyHelpMenuView difficultyHelpMenuView = new DifficultyHelpMenuView();
+        String chosenDifficulty = difficultyHelpMenuView.getInput();
         difficultyHelpMenuView.display();
         
         
@@ -74,11 +75,11 @@ public class Sudoku {
         difficultyHelpMenuControl.displayHelpEasy();
         
         difficultyHelpMenuControl.displayHelpBorder();*/
+       
         
         
-        Board grid = new Board();
-        grid.createBoardLocations(9, 9);
-        grid.clearTheBoard();
+        //grid.createBoardLocations(9, 9);
+        //grid.clearTheBoard();
         //grid.occupyLocation(null, row, column);
         
         Location location = new Location();
@@ -90,15 +91,12 @@ public class Sudoku {
         Boardhint boardhint = new Boardhint();
         boardhint.finum();
         
-        Hint findingHint = new Hint();
-        int ourHint = findingHint.getHint(grid);
-        
         //Run run = new Run(9,9);
         //run.displayNumbers();
         //run.displayTimer();  
         //run.displayBoard(9);
         
-        
+        /*
         BestTime bestTime = new BestTime();
         bestTime.displayUserName();
         bestTime.bestTime();
@@ -107,10 +105,7 @@ public class Sudoku {
              
         
         Player player = new Player();
-        player.getWinningPercentage();
-        
-        
-
+        player.getWinningPercentage();*/
     }
     
 }

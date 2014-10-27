@@ -10,6 +10,7 @@ package sudoku;
  * @author Miquelyn Hollingsworth, Jessical Marshall, Jessica West, Heidi Spackman
  */
 public class BoardView {
+    /*
     Board board;
     
     public void displayBoard(Board board) {
@@ -83,6 +84,6 @@ public class BoardView {
             System.out.print("  " + letter + "  |");
         }
     }
-
+*/
 }
     
