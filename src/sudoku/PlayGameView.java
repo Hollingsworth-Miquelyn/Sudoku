@@ -74,7 +74,12 @@ public class PlayGameView {
         for (int i = 0; i < 9; i ++) {// row
             System.out.print("\t" + (i+1) + "  |  ");//this is adding y axis coodinates
             for (int j = 0; j < 9; j++) {//column
-                System.out.printf("%-3s",ourBoard[i][j]);
+                if(ourBoard[i][j] != 0) {
+                    System.out.printf("%-3s",ourBoard[i][j]);
+                }
+                else {
+                    System.out.printf("%-3s","_");
+                }
             }
             System.out.print("|");
             System.out.println();

@@ -43,6 +43,6 @@ public class Hint {
         
         String hintDisplay = "For Row " + displayedRowNumber + " And Column " + displayedColumnNumber + " the answer is " + hint;
         
-        return hint;    
+        return hintDisplay;    
     }
 }

@@ -14,6 +14,7 @@ import java.util.Scanner;
  * @author Miquelyn Hollingsworth, Jessica Marshall, Jessica West, Heidi Spackman
  */
 public class Sudoku {
+    
     private String difficulty = "easy";
     private double bestTime = 5.25;
     private String name;
@@ -38,6 +39,7 @@ public class Sudoku {
         
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
+        sudoku.displayGoodbyUser();
         //mainMenu.display();
         
         /*HelpMenuView helpMenuView = new HelpMenuView();
@@ -107,5 +109,7 @@ public class Sudoku {
         Player player = new Player();
         player.getWinningPercentage();*/
     }
-    
+    public void displayGoodbyUser(){
+        System.out.println("\nThanks for playing " + this.name + "\n");
+    }
 }
