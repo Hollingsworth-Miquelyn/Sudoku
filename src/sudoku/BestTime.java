@@ -64,9 +64,10 @@ public class BestTime {
                 else { // not enough scores
                     new SudokuError().displayError(
                         "Not enough scores to display best time");
-                    
+        
                 }
             }
+        System.out.println("Your scores are " + SelectionSort);
     }
     public void highScore(){
         int maxScore = 6000;
@@ -80,4 +81,23 @@ public class BestTime {
             System.out.println("Congratulations! \nYour game score is " + score + "!");
         }    
     }
+
+
+public static void SelectionSort ( int [ ] pastScores )
+{
+     int i, j, first, temp;  
+     for ( i = pastScores.length - 1; i > 0; i++ )  
+     {
+          first = 0;   //initialize to subscript of first element
+          for(j = 1; j <= i; j ++)   //locate smallest element between positions 1 and i.
+          {
+               if( pastScores[ j ] < pastScores[ first ] )         
+                 first = j;
+          }
+          temp = pastScores[ first ];   //swap smallest found with element in position i.
+          pastScores[ first ] = pastScores[ i ];
+          pastScores[ i ] = temp; 
+      }        
+     
+}
 }

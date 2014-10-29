@@ -44,7 +44,10 @@ public class Sudoku {
         CheckAnswer checkAnswer = new CheckAnswer();
         checkAnswer.answerTest();
         checkAnswer.checking();
-               
+        
+        BestTime bestTime = new BestTime();
+        bestTime.bestScore();
+        
     }
     public void displayGoodbyUser(){
         System.out.println("\nThanks for playing " + this.name + "\n");
