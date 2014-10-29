@@ -47,7 +47,7 @@ public class Sudoku {
         
         BestTime bestTime = new BestTime();
         bestTime.bestScore();
-        
+        bestTime.averageScore();
         
     }
     public void displayGoodbyUser(){

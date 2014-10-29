@@ -37,17 +37,16 @@ public class BestTime {
     }
     
     public void bestScore() {
-        int pastScores[] = {15, 19, 8, 12, 20};
+       int pastScores[] = {15, 19, 8, 12, 20};
         int pastScores2[] = doSelectionSort(pastScores);
-        int min, max;
+       int min, max;
         min = max = pastScores[0];
         
         for(int i:pastScores2){
             System.out.print(i);
             System.out.print(", ");
         }
-        
-        for(int i = 1; i < pastScores.length; i++) {
+       for(int i = 1; i < pastScores.length; i++) {
         if(pastScores[i] < min) min = pastScores[i];
         if(pastScores[i] > max) max = pastScores[i];
         }
@@ -103,5 +102,18 @@ public static int[] doSelectionSort ( int [ ] pastScores )
       }
      return pastScores;
 }
-     
+  //public static double averageScore( int [] playerScores) {
+      public void averageScore() {
+          double playerScores[] = {100, 55, 95, 25, 64, 97, 84, 77, 80, 91};
+          double sum = 0;
+          double aver;
+     for(double i : playerScores){
+      sum += i;
+     }
+    
+        aver = sum / playerScores.length;
+        System.out.println();
+        System.out.println("Your average score is: " + aver + " out of " + 
+                playerScores.length + " games played.");
+  }   
 }
