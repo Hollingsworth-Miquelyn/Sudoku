@@ -40,74 +40,11 @@ public class Sudoku {
         MainMenuView mainMenu = new MainMenuView();
         mainMenu.getInput();
         sudoku.displayGoodbyUser();
-        //mainMenu.display();
-        
-        /*HelpMenuView helpMenuView = new HelpMenuView();
-        helpMenuView.getInput();
-        helpMenuView.display();
-      
-        HelpMenuControl helpMenuControl = new HelpMenuControl();
-        helpMenuControl.displayBoardHelp();
-        helpMenuControl.displayDifficultyHelp();
-        helpMenuControl.displayHintHelp();        
-        helpMenuControl.displayGameHelp();
-        helpMenuControl.displayScoreHelp();
-        helpMenuControl.displayError();
-        helpMenuControl.displayHelpBorder();
-        
-        GameHelpMenuView gameHelpMenuView = new GameHelpMenuView();
-        gameHelpMenuView.getInput();
-        gameHelpMenuView.display();
-        
-        GameHelpMenuControl gameHelpMenuControl = new GameHelpMenuControl();
-        gameHelpMenuControl.displayObjectiveHelp();
-        gameHelpMenuControl.displayThreeHelp();
-        gameHelpMenuControl.displayNineHelp();
-        gameHelpMenuControl.displayError();
-        gameHelpMenuControl.displayHelpBorder();*/
-                
-        /*DifficultyHelpMenuView difficultyHelpMenuView = new DifficultyHelpMenuView();
-        String chosenDifficulty = difficultyHelpMenuView.getInput();
-        difficultyHelpMenuView.display();
-        
-        
-        DifficultyHelpMenuControl difficultyHelpMenuControl = new DifficultyHelpMenuControl();
-        difficultyHelpMenuControl.displayHelpHard();
-        difficultyHelpMenuControl.displayHelpMedium();
-        difficultyHelpMenuControl.displayHelpEasy();
-        
-        difficultyHelpMenuControl.displayHelpBorder();*/
-       
-        
-        
-        //grid.createBoardLocations(9, 9);
-        //grid.clearTheBoard();
-        //grid.occupyLocation(null, row, column);
-        
-        Location location = new Location();
-        
+           
         CheckAnswer checkAnswer = new CheckAnswer();
         checkAnswer.answerTest();
         checkAnswer.checking();
-        
-        Boardhint boardhint = new Boardhint();
-        boardhint.finum();
-        
-        //Run run = new Run(9,9);
-        //run.displayNumbers();
-        //run.displayTimer();  
-        //run.displayBoard(9);
-        
-        /*
-        BestTime bestTime = new BestTime();
-        bestTime.displayUserName();
-        bestTime.bestTime();
-        bestTime.bestScore();
-        bestTime.highScore();
-             
-        
-        Player player = new Player();
-        player.getWinningPercentage();*/
+               
     }
     public void displayGoodbyUser(){
         System.out.println("\nThanks for playing " + this.name + "\n");
