@@ -48,6 +48,7 @@ public class Sudoku {
         BestTime bestTime = new BestTime();
         bestTime.bestScore();
         
+        
     }
     public void displayGoodbyUser(){
         System.out.println("\nThanks for playing " + this.name + "\n");

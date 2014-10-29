@@ -37,9 +37,15 @@ public class BestTime {
     }
     
     public void bestScore() {
-        double pastScores[] = {15.06, 19.25, 8.09, 12.09, 20.09};
-        double min, max;
+        int pastScores[] = {15, 19, 8, 12, 20};
+        int pastScores2[] = doSelectionSort(pastScores);
+        int min, max;
         min = max = pastScores[0];
+        
+        for(int i:pastScores2){
+            System.out.print(i);
+            System.out.print(", ");
+        }
         
         for(int i = 1; i < pastScores.length; i++) {
         if(pastScores[i] < min) min = pastScores[i];
@@ -67,7 +73,7 @@ public class BestTime {
         
                 }
             }
-        System.out.println("Your scores are " + SelectionSort);
+        
     }
     public void highScore(){
         int maxScore = 6000;
@@ -83,21 +89,19 @@ public class BestTime {
     }
 
 
-public static void SelectionSort ( int [ ] pastScores )
+public static int[] doSelectionSort ( int [ ] pastScores )
 {
-     int i, j, first, temp;  
-     for ( i = pastScores.length - 1; i > 0; i++ )  
+     for (int i = 0; i < pastScores.length - 1; i++)
      {
-          first = 0;   //initialize to subscript of first element
-          for(j = 1; j <= i; j ++)   //locate smallest element between positions 1 and i.
-          {
-               if( pastScores[ j ] < pastScores[ first ] )         
-                 first = j;
-          }
-          temp = pastScores[ first ];   //swap smallest found with element in position i.
-          pastScores[ first ] = pastScores[ i ];
-          pastScores[ i ] = temp; 
-      }        
-     
+         int index = i;
+         for (int j = i + 1; j <pastScores.length; j++)
+             if (pastScores[j] < pastScores[index])
+                 index = j;
+         int smallerNumber = pastScores[index];
+         pastScores[index] = pastScores[i];
+         pastScores[i] = smallerNumber;
+      }
+     return pastScores;
 }
+     
 }
