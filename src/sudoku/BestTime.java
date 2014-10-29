@@ -102,7 +102,7 @@ public static int[] doSelectionSort ( int [ ] pastScores )
       }
      return pastScores;
 }
-  //public static double averageScore( int [] playerScores) {
+    //By: Heidi Spackman Lesson 6
       public void averageScore() {
           double playerScores[] = {100, 55, 95, 25, 64, 97, 84, 77, 80, 91};
           double sum = 0;
