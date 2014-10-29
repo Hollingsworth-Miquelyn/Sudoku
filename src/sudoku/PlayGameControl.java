@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Jessica
+ * @author Jessica Marshall
  */
 public class PlayGameControl {
     static final String[][] menuItems = {
@@ -26,21 +26,21 @@ public class PlayGameControl {
     public void enterCoordinates(Board userBoard) {
         String command, xCoordinate, yCoordinate, answer;
         
-        System.out.println("Enter X Coordinate:");
+        System.out.println("Enter Column Coordinate:");
         
         Scanner inFile = new Scanner(System.in);
         command = inFile.nextLine();
         command = command.trim().toUpperCase();
         xCoordinate = command;
         
-        System.out.println("Enter Y Coordinate:");
+        System.out.println("Enter Row Coordinate:");
         
         inFile = new Scanner(System.in);
         command = inFile.nextLine();
         command = command.trim().toUpperCase();
         yCoordinate = command;
         
-        System.out.println("Enter Answer:");
+        System.out.println("Enter Your Answer:");
         
         inFile = new Scanner(System.in);
         command = inFile.nextLine();
@@ -57,7 +57,7 @@ public class PlayGameControl {
     
     public void requestHint(Board userBoard) {
         Hint findingHint = new Hint();
-        //Get a random hint from the answer board that was not filled by default (hint may be already entered by user)
+        //Get a random hint from the answer board that was not filled by user
         String ourHint = findingHint.getHint(userBoard.getBoard(), userBoard.getAnswerBoard());
         System.out.println(ourHint);
     }

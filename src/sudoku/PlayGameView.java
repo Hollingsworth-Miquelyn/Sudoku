@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author Jessica
+ * @author Jessica Marshall
  */
 public class PlayGameView {
     static final String[][] menuItems = {
