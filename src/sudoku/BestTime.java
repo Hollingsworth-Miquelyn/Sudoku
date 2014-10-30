@@ -37,11 +37,16 @@ public class BestTime {
     }
     
     public void bestScore() {
-        int pastScores[] = {15, 19, 8, 12, 20};
-        int min, max;
+       int pastScores[] = {15, 19, 8, 12, 20};
+        int pastScores2[] = doSelectionSort(pastScores);
+       int min, max;
         min = max = pastScores[0];
         
-        for(int i = 1; i < pastScores.length; i++) {
+        for(int i:pastScores2){
+            System.out.print(i);
+            System.out.print(", ");
+        }
+       for(int i = 1; i < pastScores.length; i++) {
         if(pastScores[i] < min) min = pastScores[i];
         if(pastScores[i] > max) max = pastScores[i];
         }
@@ -83,27 +88,32 @@ public class BestTime {
     }
 
 
-
-    @SuppressWarnings({"empty-statement", "empty-statement"})
-    public static void ExchangeSort ()
+public static int[] doSelectionSort ( int [ ] pastScores )
 {
-     int i, j, temp;  //be sure that the temp variable is the same "type" as the array
-     int pastScores[] = {15, 19, 8, 12, 20};
-     for ( i = 0; i < pastScores.length - 1; i ++ )  
+     for (int i = 0; i < pastScores.length - 1; i++)
      {
-          for ( j = i + 1; j < pastScores.length; j ++ )
-          {
-               if( pastScores[ i ] < pastScores[ j ] )         //sorting into descending order
-               {
-                       temp = pastScores[ i ];   //swapping
-                       pastScores[ i ] = pastScores[ j ];
-                       pastScores[ j ] = temp; 
-                }           
-          }
-     }
-     System.out.print("Sorted Times are:");
-     for(i=0; i < pastScores.length; i++);
-        System.out.print(" " + pastScores[i]);
-        System.out.println();
+         int index = i;
+         for (int j = i + 1; j <pastScores.length; j++)
+             if (pastScores[j] < pastScores[index])
+                 index = j;
+         int smallerNumber = pastScores[index];
+         pastScores[index] = pastScores[i];
+         pastScores[i] = smallerNumber;
+      }
+     return pastScores;
 }
+    //By: Heidi Spackman Lesson 6
+      public void averageScore() {
+          double playerScores[] = {100, 55, 95, 25, 64, 97, 84, 77, 80, 91};
+          double sum = 0;
+          double aver;
+     for(double i : playerScores){
+      sum += i;
+     }
+    
+        aver = sum / playerScores.length;
+        System.out.println();
+        System.out.println("Your average score is: " + aver + " out of " + 
+                playerScores.length + " games played.");
+  }   
 }

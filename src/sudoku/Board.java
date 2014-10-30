@@ -85,8 +85,8 @@ public class Board {
                 this.chosenAnswerBoard = boardMediumAnswer;            
                 break;
             case "H":
-                this.chosenBoard = boardEasyEmpty;
-                this.chosenAnswerBoard = boardEasyAnswer;
+                this.chosenBoard = boardHardEmpty;
+                this.chosenAnswerBoard = boardHardAnswers;
                 break;
             default: 
                 new SudokuError().displayError("Invalid command. Please enter a valid command.");                  
@@ -106,7 +106,7 @@ public class Board {
     }
     
     
-/*
+/* NOT IN USE******
     
     @author Miquelyn Hollingsworth, Jessica Marshall, Jessica West, Heidi Spackman
     
