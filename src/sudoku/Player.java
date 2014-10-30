@@ -33,9 +33,7 @@ public class Player {
         int pastScores[] = { 15, 19, 8, 12, 20 };  
     int sum = 0;  
  
-    // use for-each style for to display and sum the values 
     for(int x : pastScores) {  
-      //System.out.println("Value is: " + x); 
       sum += x;  
     }  
  
