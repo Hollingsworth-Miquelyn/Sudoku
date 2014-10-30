@@ -47,6 +47,7 @@ public class Sudoku {
         
         BestTime bestTime = new BestTime();
         bestTime.bestScore();
+        BestTime.ExchangeSort();
         
     }
     public void displayGoodbyUser(){

@@ -37,8 +37,8 @@ public class BestTime {
     }
     
     public void bestScore() {
-        double pastScores[] = {15.06, 19.25, 8.09, 12.09, 20.09};
-        double min, max;
+        int pastScores[] = {15, 19, 8, 12, 20};
+        int min, max;
         min = max = pastScores[0];
         
         for(int i = 1; i < pastScores.length; i++) {
@@ -67,7 +67,7 @@ public class BestTime {
         
                 }
             }
-        System.out.println("Your scores are " + SelectionSort);
+        
     }
     public void highScore(){
         int maxScore = 6000;
@@ -83,21 +83,27 @@ public class BestTime {
     }
 
 
-public static void SelectionSort ( int [ ] pastScores )
+
+    @SuppressWarnings({"empty-statement", "empty-statement"})
+    public static void ExchangeSort ()
 {
-     int i, j, first, temp;  
-     for ( i = pastScores.length - 1; i > 0; i++ )  
+     int i, j, temp;  //be sure that the temp variable is the same "type" as the array
+     int pastScores[] = {15, 19, 8, 12, 20};
+     for ( i = 0; i < pastScores.length - 1; i ++ )  
      {
-          first = 0;   //initialize to subscript of first element
-          for(j = 1; j <= i; j ++)   //locate smallest element between positions 1 and i.
+          for ( j = i + 1; j < pastScores.length; j ++ )
           {
-               if( pastScores[ j ] < pastScores[ first ] )         
-                 first = j;
+               if( pastScores[ i ] < pastScores[ j ] )         //sorting into descending order
+               {
+                       temp = pastScores[ i ];   //swapping
+                       pastScores[ i ] = pastScores[ j ];
+                       pastScores[ j ] = temp; 
+                }           
           }
-          temp = pastScores[ first ];   //swap smallest found with element in position i.
-          pastScores[ first ] = pastScores[ i ];
-          pastScores[ i ] = temp; 
-      }        
-     
+     }
+     System.out.print("Sorted Times are:");
+     for(i=0; i < pastScores.length; i++);
+        System.out.print(" " + pastScores[i]);
+        System.out.println();
 }
 }

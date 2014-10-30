@@ -12,18 +12,7 @@ public class Player {
     
     private int wins = 5;
     private int gamesPlayed = 7;
-    public String marker;
-    
-    
-
-    public Player() {
-    }
-
-    public Player(String marker) {
-        this.marker = marker;
-    }
-    
-   
+ 
     public double getWinningPercentage() {
                
         double winRatio = (double) wins / gamesPlayed *100;
@@ -40,5 +29,16 @@ public class Player {
         return winRatio*100;}
         return 0;
     }
-           
-}
+ public void averageScore() {
+        int pastScores[] = { 15, 19, 8, 12, 20 };  
+    int sum = 0;  
+ 
+    // use for-each style for to display and sum the values 
+    for(int x : pastScores) {  
+      //System.out.println("Value is: " + x); 
+      sum += x;  
+    }  
+ 
+    System.out.println("Average Time: " + sum/pastScores.length); 
+  }  
+ }
