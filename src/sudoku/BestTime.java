@@ -11,8 +11,6 @@ package sudoku;
  * @author Miquelyn
  */
 public class BestTime {
-    private String userName = "Miquelyn";
-    private String totalTime = "6:25";
     private int topTen = 10;
     private int seconds = 0;
     private int minutes = 0;
@@ -21,10 +19,7 @@ public class BestTime {
     public BestTime() {
         
     }
-    //This will pull the username from the intial username input
-    public void displayUserName() {
-        System.out.println(this.userName);
-    }
+    
     public void bestTime() {
         double secondsDecimal = (double)seconds / decimals;
         double totalTime = (double)minutes + secondsDecimal;
@@ -38,7 +33,8 @@ public class BestTime {
     
     public void bestScore() {
        int pastScores[] = {15, 19, 8, 12, 20};
-        int pastScores2[] = doSelectionSort(pastScores);
+       int pastScores2[] = doSelectionSort(pastScores);
+       int sum = 0;
        int min, max;
         min = max = pastScores[0];
         
@@ -50,7 +46,12 @@ public class BestTime {
         if(pastScores[i] < min) min = pastScores[i];
         if(pastScores[i] > max) max = pastScores[i];
         }
-        
+       
+       //Miquelyn Hollingsworth Lesson 6
+       for(int x: pastScores) {
+           sum += x;
+       }
+       System.out.println("Total time played: " + sum + "minutes");
           
         if (pastScores.length > 1) {
                 if (min <= 0 ) { 

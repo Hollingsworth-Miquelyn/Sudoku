@@ -8,7 +8,7 @@ package sudoku;
 
 /**
  * @author  Jessica lesson2
- * @author Heidi Spackman Lesson3 (changed everything)
+ * @author Heidi Spackman 
  * @author Miquelyn Hollingsworth
  */
 public class CheckAnswer {
