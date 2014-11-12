@@ -35,7 +35,7 @@ public class HelpMenuView {
     public void getInput() {       
               
         String command;
-        Scanner inFile = new Scanner(System.in);
+        Scanner inFile = Sudoku.GetInputFile();
         
         do {
             

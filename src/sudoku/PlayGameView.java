@@ -30,7 +30,7 @@ public class PlayGameView {
    public void getInput(Board userBoard) {
        
     String command;
-        Scanner inFile = new Scanner(System.in);
+        Scanner inFile = Sudoku.GetInputFile();
         
         do {
             

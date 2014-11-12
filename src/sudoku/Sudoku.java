@@ -14,7 +14,7 @@ import java.util.Scanner;
  * @author Miquelyn Hollingsworth, Jessica Marshall, Jessica West, Heidi Spackman
  */
 public class Sudoku {
-    
+    private static Scanner inFile= new Scanner(System.in);
     private String difficulty = "easy";
     private double bestTime = 5.25;
     private String name;
@@ -22,7 +22,9 @@ public class Sudoku {
     public Sudoku(){
         
     }
-    
+    public static Scanner GetInputFile(){
+        return Sudoku.inFile;
+    }
     public void getName(){
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter your name:");
@@ -53,4 +55,5 @@ public class Sudoku {
     public void displayGoodbyUser(){
         System.out.println("\nThanks for playing " + this.name + "\n");
     }
+    
 }
