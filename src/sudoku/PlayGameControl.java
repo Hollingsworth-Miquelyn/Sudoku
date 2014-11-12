@@ -18,6 +18,11 @@ public class PlayGameControl implements Serial{
     public PlayGameControl() {
         
     }
+
+    public static String[][] getMenuItems() {
+        return menuItems;
+    }
+    
     
     public void enterCoordinates(Board userBoard) {
         String command, xCoordinate, yCoordinate, answer;

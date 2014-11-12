@@ -11,6 +11,19 @@ import java.util.Scanner;
  */
 
 public class Sudoku {
+
+    public static Scanner getInFile() {
+        return inFile;
+    }
+
+    public static void setInFile(Scanner inFile) {
+        Sudoku.inFile = inFile;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+    
     private static Scanner inFile= new Scanner(System.in);
     private String name;
 

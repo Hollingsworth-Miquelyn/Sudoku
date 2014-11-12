@@ -9,6 +9,12 @@ import java.util.Random;
  * @author Jessica Marshall
  */
 public class Hint implements Serial{
+
+    public Hint() {
+    }
+    
+    
+    
     public String getHint(int[][] ourEmptyBoard, int[][] ourAnswerBoard){
         Random randomRow = new Random();
         Random randomColumn = new Random();
