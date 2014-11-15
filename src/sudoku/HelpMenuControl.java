@@ -4,12 +4,13 @@
  * and open the template in the editor.
  */
 package sudoku;
+import java.io.Serializable;
 
 /**
  *
  * @author Group of Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessica Marshall
  */
-public class HelpMenuControl  {
+public class HelpMenuControl implements Serial {
     
     public HelpMenuControl() {
         

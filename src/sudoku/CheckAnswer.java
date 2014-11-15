@@ -5,13 +5,14 @@
  */
 
 package sudoku;
-
+import java.io.Serializable;
 /**
  * @author  Jessica lesson2
  * @author Heidi Spackman 
  * @author Miquelyn Hollingsworth
  */
-public class CheckAnswer {
+public class CheckAnswer implements Serial {
+    
     private int row=8;
     private int cell1=90;
     private int cell2=-1;
@@ -25,7 +26,7 @@ public class CheckAnswer {
     public int cellanswer;
     public boolean b;
     //creating answer grid
-    public int[][] boardEasyAnswer = { {4, 5, 2, 3, 9, 1, 8, 7, 6},
+    private int[][] boardEasyAnswer = { {4, 5, 2, 3, 9, 1, 8, 7, 6},
                                    {3, 1, 8, 6, 7, 5, 2, 9, 4},
                                    {6, 7, 9, 4, 2, 8, 3, 1, 5},
                                    {8, 3, 1, 5, 6, 4, 7, 2, 9},
@@ -39,11 +40,11 @@ public class CheckAnswer {
     public CheckAnswer() {
     }
     
-    public void answerTest(){
+    private void answerTest(){
         System.out.print(boardEasyAnswer);
     }
     
-    public void checking(){
+    private void checking(){
         
       
             if(cell1 < 1){ 
@@ -98,12 +99,12 @@ public class CheckAnswer {
             }
 
     //returns true if column is correct.
-    public static boolean colContains(int[][] boardEasyAnswer, int col, int value){
+    private static boolean colContains(int[][] boardEasyAnswer, int col, int value){
         for (int row = 0; row < boardEasyAnswer.length; row++){
             if (boardEasyAnswer[row][col] == value)
                 return true;
         }
-        return false; //mber is not in the column
+        return false; //number is not in the column
      
     }
 } 
