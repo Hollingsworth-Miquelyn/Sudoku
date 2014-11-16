@@ -4,12 +4,15 @@
  * and open the template in the editor.
  */
 package sudoku;
-
+import java.io.Serializable;
 /**
  *
  * @author Miquelyn Hollingsworth
  */
-public class MainMenuControl {
+public class MainMenuControl implements Serial{
+
+    public MainMenuControl() {
+    }
     
 public void newGame() {
         NewGameView newGame = new NewGameView();

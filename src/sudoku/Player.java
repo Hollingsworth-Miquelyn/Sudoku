@@ -74,7 +74,7 @@ public class Player implements Serial{
         else {
             int score = maxScore - (int)totalTime;
             System.out.println("Congratulations! \nYour game score is " + score + "!");
-        }    
+       }    
     }
  }
 }

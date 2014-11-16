@@ -24,7 +24,7 @@ public class Sudoku {
         this.name = name;
     }
     
-    private static Scanner inFile= new Scanner(System.in);
+    static Scanner inFile= new Scanner(System.in);
     private String name;
 
     public static Scanner GetInputFile(){

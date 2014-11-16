@@ -7,12 +7,12 @@
 package sudoku;
 
 import java.util.Scanner;
-
+import java.io.Serializable;
 /**
  *
  * @author Jessica Marshall
  */
-public class PlayGameView {
+public class PlayGameView implements Serial {
     static final String[][] menuItems = {
         {"C", "Coordinates and Answer"},
         {"H", "Request Hint"},
@@ -25,7 +25,15 @@ public class PlayGameView {
     public PlayGameView() {
         
     }
-    
+
+    public PlayGameControl getPlayGameControl() {
+        return playGameControl;
+    }
+
+    public void setPlayGameControl(PlayGameControl playGameControl) {
+        this.playGameControl = playGameControl;
+    }
+        
     //Play Game Menu and Board
    public void getInput(Board userBoard) {
        

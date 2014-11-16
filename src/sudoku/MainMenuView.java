@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package sudoku;
-
+import java.io.Serializable;
 import java.util.Scanner;
 /**
  *
  * @author Miquelyn Hollingsworth
  */
-public class MainMenuView {
+public class MainMenuView  implements Serial{
     
     private static final String[][] menuItems = {
         {"N", "New Game"},
@@ -24,6 +24,13 @@ public class MainMenuView {
 
     }
  
+    public MainMenuControl getMainMenuControl() {
+        return mainMenuControl;
+    }
+
+    public void setMainMenuControl(MainMenuControl mainMenuControl) {
+        this.mainMenuControl = mainMenuControl;
+    }
     
     public void getInput() {       
 
@@ -67,5 +74,5 @@ public class MainMenuView {
         }
         System.out.println("\t===============================================================\n");
     }   
-    
+   
 }
