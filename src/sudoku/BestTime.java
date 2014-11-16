@@ -5,20 +5,52 @@
  */
 
 package sudoku;
-
+import java.io.Serializable;
 /**
  *
  * @author Miquelyn
  */
-public class BestTime {
+public class BestTime implements Serializable{
     private int topTen = 10;
     private int seconds = 0;
     private int minutes = 0;
     private int decimals = 60;
 
     public BestTime() {
-        
     }
+
+    public int getTopTen() {
+        return topTen;
+    }
+
+    public void setTopTen(int topTen) {
+        this.topTen = topTen;
+    }
+
+    public int getSeconds() {
+        return seconds;
+    }
+
+    public void setSeconds(int seconds) {
+        this.seconds = seconds;
+    }
+
+    public int getMinutes() {
+        return minutes;
+    }
+
+    public void setMinutes(int minutes) {
+        this.minutes = minutes;
+    }
+
+    public int getDecimals() {
+        return decimals;
+    }
+
+    public void setDecimals(int decimals) {
+        this.decimals = decimals;
+    }
+    
     
     public void bestTime() {
         double secondsDecimal = (double)seconds / decimals;
@@ -103,18 +135,5 @@ public static int[] doSelectionSort ( int [ ] pastScores )
       }
      return pastScores;
 }
-    //By: Heidi Spackman Lesson 6
-      public void averageScore() {
-          double playerScores[] = {100, 55, 95, 25, 64, 97, 84, 77, 80, 91};
-          double sum = 0;
-          double aver;
-     for(double i : playerScores){
-      sum += i;
-     }
     
-        aver = sum / playerScores.length;
-        System.out.println();
-        System.out.println("Your average score is: " + aver + " out of " + 
-                playerScores.length + " games played.");
-  }   
 }
