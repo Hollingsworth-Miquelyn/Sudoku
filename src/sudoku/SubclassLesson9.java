@@ -9,9 +9,9 @@ import java.util.Scanner;
 
 /**
  *
- * @author Miquelyn Hollingsworth
+ * @author Jessica Marshall
  */
-public class NewGameView extends Menu {
+public class SubclassLesson9 extends MenuLesson9 {
     
     static final String[][] menuItems = {
         {"E", "Level Easy"},
@@ -20,11 +20,11 @@ public class NewGameView extends Menu {
         {"Q", "Quit New Game"},
     };
     //create instance of the NewGameControl (action) class
-    private NewGameControl newGameControl = new NewGameControl();
+    private SubclassLesson9 subclassLesson9 = new SubclassLesson9();
     
     //default constructor
-    public NewGameView() {
-         super(NewGameView.menuItems);
+    public SubclassLesson9() {
+         super(SubclassLesson9.menuItems);
     }
     
     //display new game menu and get end users input selection
@@ -41,15 +41,16 @@ public class NewGameView extends Menu {
             // get commaned entered
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
+            
             switch (command) {
                 case "E":
-                    this.newGameControl.startEasyGame();
+                    this.subclassLesson9.startEasyGame();
                     break;
                 case "M":
-                    this.newGameControl.startMediumGame();
+                    this.subclassLesson9.startMediumGame();
                     break;
                 case "H":
-                    this.newGameControl.startHardGame();
+                    this.subclassLesson9.startHardGame();
                     break;
                 case "Q":
                     break;
@@ -61,15 +62,16 @@ public class NewGameView extends Menu {
         
         return command;
         }
-   /*
-   //displays the new game menu
-   public final void display() {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
 
-        for (int i = 0; i < NewGameView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-    }*/
+    private void startHardGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void startMediumGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private void startEasyGame() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
