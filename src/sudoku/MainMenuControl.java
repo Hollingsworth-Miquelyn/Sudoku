@@ -16,12 +16,12 @@ public class MainMenuControl implements Serial{
     
 public void newGame() {
         NewGameView newGame = new NewGameView();
-        newGame.getInput();
+        newGame.executeCommands(null);
     }        
     
     public void displayHelpMenu() {
         HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.getInput();
+        helpMenu.executeCommands(null);
     }
     
 }

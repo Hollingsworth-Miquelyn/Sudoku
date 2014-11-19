@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessical Marshall
  */
-public class HelpMenuView implements Serial{
+public class HelpMenuView extends Menu{//implements Serial
    
         
     static final String[][] menuItems = {
@@ -23,16 +23,17 @@ public class HelpMenuView implements Serial{
         {"Q", "Quit Help"}        
     };
     
+    public HelpMenuView() {
+         super(HelpMenuView.menuItems);
+    }
+    
     // Create instance of the HelpMenuControl (action) class
     private HelpMenuControl helpMenuControl = new HelpMenuControl();
     
-    // default constructor
-    public HelpMenuView() {
-        
-    } 
-    
     // display the help menu and get the end users input selection
-    public void getInput() {       
+    //@Override
+    @Override
+    public String executeCommands(Object object) {       
               
         String command;
         Scanner inFile = Sudoku.GetInputFile();
@@ -69,9 +70,9 @@ public class HelpMenuView implements Serial{
             }
         } while (!command.equals("Q"));  
         
-         return;
+         return command;
     }
-
+/*
         // displays the help menu
     public final void display() {
         System.out.println("\n\t===============================================================");
@@ -82,6 +83,6 @@ public class HelpMenuView implements Serial{
         }
         System.out.println("\t===============================================================\n");
     }
-  
+*/  
 }
     

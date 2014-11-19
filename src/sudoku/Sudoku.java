@@ -45,7 +45,7 @@ public class Sudoku {
         sudoku.displayWelcomeUser();
                
         MainMenuView mainMenu = new MainMenuView();
-        mainMenu.getInput();
+        mainMenu.executeCommands(null);
         sudoku.displayGoodbyUser();
     }
     public void displayGoodbyUser(){

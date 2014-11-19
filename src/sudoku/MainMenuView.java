@@ -10,9 +10,9 @@ import java.util.Scanner;
  *
  * @author Miquelyn Hollingsworth
  */
-public class MainMenuView  implements Serial{
+public class MainMenuView  extends Menu{                 //implements Serial
     
-    private static final String[][] menuItems = {
+    public static final String[][] menuItems = {
         {"N", "New Game"},
         {"H", "Help"},
         {"Q", "Quit Sudoku"}      
@@ -21,9 +21,9 @@ public class MainMenuView  implements Serial{
     MainMenuControl mainMenuControl = new MainMenuControl();
     
     public MainMenuView() {
-
+         super(MainMenuView.menuItems);
     }
- 
+        
     public MainMenuControl getMainMenuControl() {
         return mainMenuControl;
     }
@@ -31,8 +31,8 @@ public class MainMenuView  implements Serial{
     public void setMainMenuControl(MainMenuControl mainMenuControl) {
         this.mainMenuControl = mainMenuControl;
     }
-    
-    public void getInput() {       
+    @Override
+    public String executeCommands(Object object) {       
 
         String command;
         Scanner inFile = Sudoku.GetInputFile();
@@ -59,12 +59,9 @@ public class MainMenuView  implements Serial{
             }
         } while (!command.equals("Q"));
 
-        return;
+        return command;
     }
-    
-
-    
-    
+/*
    public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -74,5 +71,5 @@ public class MainMenuView  implements Serial{
         }
         System.out.println("\t===============================================================\n");
     }   
-   
+ */  
 }

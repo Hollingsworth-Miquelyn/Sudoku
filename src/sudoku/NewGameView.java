@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Miquelyn Hollingsworth
  */
-public class NewGameView {
+public class NewGameView extends Menu {
     
     static final String[][] menuItems = {
         {"E", "Level Easy"},
@@ -24,11 +24,12 @@ public class NewGameView {
     
     //default constructor
     public NewGameView() {
-        
+         super(NewGameView.menuItems);
     }
     
     //display new game menu and get end users input selection
-   public void getInput() {
+    @Override
+   public String executeCommands(Object object) {
        
     String command;
         Scanner inFile = Sudoku.GetInputFile();
@@ -59,9 +60,9 @@ public class NewGameView {
             }
         } while (!command.equals("Q"));
         
-        return;
+        return command;
         }
-   
+   /*
    //displays the new game menu
    public final void display() {
         System.out.println("\n\t===============================================================");
@@ -71,5 +72,5 @@ public class NewGameView {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
         System.out.println("\t===============================================================\n");
-    }
+    }*/
 }
