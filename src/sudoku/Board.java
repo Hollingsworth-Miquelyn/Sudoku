@@ -4,13 +4,13 @@
  * and open the template in the editor.
  */
 package sudoku;
-
+import java.io.Serializable;
 /**
  *
  * @author Jessical Marshall
  */
 
-public class Board {
+public class Board implements Serializable{
     int[][] boardEasyAnswer = {{4, 5, 2, 3, 9, 1, 8, 7, 6},
                                {3, 1, 8, 6, 7, 5, 2, 9, 4},
                                {6, 7, 9, 4, 2, 8, 3, 1, 5},
@@ -71,8 +71,11 @@ public class Board {
                               {0, 0, 0, 0, 4, 0, 0, 8, 0},
                               {0, 0, 0, 0, 8, 0, 0, 0, 3}};
     
+    
     private int[][] chosenBoard;
     private int[][] chosenAnswerBoard;
+    
+    
 
     public void setBoard(String boardDifficulty) {
         switch (boardDifficulty) {
@@ -106,60 +109,5 @@ public class Board {
     }
     
     
-/* NOT IN USE******
-    
-    @author Miquelyn Hollingsworth, Jessica Marshall, Jessica West, Heidi Spackman
-    
-    
-    public int rowCount = 9;
-    public int columnCount = 9;
-   
-    public Location[][] boardLocations;
-
-    public Board() {
-    }
-
-    public Board(int noRows, int noColumns) {
-  
-        this.createBoardLocations(noRows, noColumns);
-    }
-
-
-    public void createBoardLocations(int noRows, int noColumns) {
-        this.rowCount= noRows;
-        this.columnCount= noColumns;
-        
-        // add locations to the board
-        this.boardLocations = new Location[noRows][noColumns];
-        for (int row = 0; row < noRows; row++) { // for every row
-            // for every column in the row
-            for (int column = 0; column < noColumns; column++) { 
-                this.boardLocations[row][column] = new Location();           
-            }            
-        }   
-    }
-    
-    
-    public void clearTheBoard() {
-        // add locations to the board
-        for (int row = 0; row < this.rowCount; row++) {
-            for (int column = 0; column < this.columnCount; column++) {
-                Location location = this.boardLocations[row][column];
-                location.player = null;           
-            }            
-        }    
-    }
-
-    public void occupyLocation(Player player, int row, int column) {
-        Location location = this.boardLocations[row][column];
-        
-        if ( location.player != null) { // location already occupied
-            new SudokuError().displayError("This location is already occupied. "
-                    + "Try a different location.");
-        }
-        
-        location.player = player;
-    }
-*/
 
 }
