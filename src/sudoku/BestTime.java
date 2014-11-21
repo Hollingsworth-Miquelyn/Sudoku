@@ -10,7 +10,7 @@ import java.io.Serializable;
  *
  * @author Miquelyn
  */
-public class BestTime implements Serializable{
+public abstract class BestTime extends Time implements Serializable{
     private int topTen = 10;
     private int seconds = 0;
     private int minutes = 0;
@@ -50,8 +50,7 @@ public class BestTime implements Serializable{
     public void setDecimals(int decimals) {
         this.decimals = decimals;
     }
-    
-    
+    @Override
     public void bestTime() {
         double secondsDecimal = (double)seconds / decimals;
         double totalTime = (double)minutes + secondsDecimal;
@@ -62,7 +61,7 @@ public class BestTime implements Serializable{
             System.out.println("Contgratulations! \n" + "Your Time" + totalTime);//int will only output the minutes can be taken out later
         }
     }
-    
+    @Override
     public void bestScore() {
        int pastScores[] = {15, 19, 8, 12, 20};
        int pastScores2[] = doSelectionSort(pastScores);
@@ -107,6 +106,7 @@ public class BestTime implements Serializable{
             }
         
     }
+    @Override
     public void highScore(){
         int maxScore = 6000;
         double minutesConversion = (double)minutes * 60;
