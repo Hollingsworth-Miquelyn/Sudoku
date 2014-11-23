@@ -10,22 +10,44 @@ package sudoku;
  * @author Heidi Spackman
  */
 /*public class ChristmasLesson9 {
-    double temperature;
-    double gift;
+    private double temperature;
+    private double gift;
     
+    ChristmasLesson9(double t, double g){
+    temperature = t;
+    gift = g;
+    }
+    
+    
+
+    public double getGift() {
+        return gift;
+    }
+    public double getTemperature(){
+        return temperature;
+    }
+
+    public void setGift(double g) {
+        gift = g;
+    }
+    public void setTemperature(double t) {
+        temperature = t;
+    }
     void showDim () {
         System.out.println("Temperature is: " + temperature + "and number of gifts equals: " + gift);
     }
-    
 }
 //subclass
-class Santa extends ChristmasLesson9{
-    String color;
+class Santa extends ChristmasLesson9 {
+    private String color;
     
-    double whatcolor() {
-        return temperature * 1;
+    Santa(String c, double t, double g) {
+        super(t,g);
+        color = c;  
     }
-
+    double temp(){
+        return getTemperature() * 1;
+    }
     void showStyle() {
         System.out.println("Santa is wearing " + color + " this year!");
     }
@@ -33,27 +55,13 @@ class Santa extends ChristmasLesson9{
 
 class Christmas {
     public static void main (String args[]){
-    ChristmasLesson9 c5 = new ChristmasLesson9();
-    ChristmasLesson9 c9 = new ChristmasLesson9();
-    
-    c5.temperature = 34;
-    c5.gift = 10;
-    c5.color = "red";
-    
-    c9.temperature = 80;
-    c9.gift = 5;
-    c9.color = "white & red";
-    
-    c5.whatcolor();
+    Santa c5 = new Santa("red", 34.0 ,10.0);
+    Santa c9 = new Santa("white & red", 80.0, 5.0);
+      
     c5.showStyle();
-    System.out.println("Christmas is " + c5.temperature + " degrees this year!");
-    System.out.println("You may only expect " + c5.gift + "gifts this year!");
     c5.showDim();
     
-    c9.whatcolor();
     c9.showStyle();
-    System.out.println("Christmas is " + c9.temperature + " degrees this year!");
-    System.out.println("You may only expect " + c5.gift + "gifts this year!");
     c9.showDim();
     }
 }*/
