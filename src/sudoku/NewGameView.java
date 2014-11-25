@@ -4,14 +4,14 @@
  * and open the template in the editor.
  */
 package sudoku;
-
+import java.io.Serializable;
 import java.util.Scanner;
 
 /**
  *
  * @author Miquelyn Hollingsworth
  */
-public class NewGameView extends Menu {
+public class NewGameView extends Menu implements Serial {
     
     static final String[][] menuItems = {
         {"E", "Level Easy"},

@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Miquelyn Hollingsworth
  */
-public class MainMenuView  extends Menu{                 //implements Serial
+public class MainMenuView  extends Menu implements Serial {                 
     
     public static final String[][] menuItems = {
         {"N", "New Game"},

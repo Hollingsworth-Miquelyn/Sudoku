@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessical Marshall
  */
-public class HelpMenuView extends Menu{//implements Serial
+public class HelpMenuView extends Menu implements Serial {
    
         
     static final String[][] menuItems = {
