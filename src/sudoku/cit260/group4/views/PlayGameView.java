@@ -4,10 +4,15 @@
  * and open the template in the editor.
  */
 
-package sudoku;
+package sudoku.cit260.group4.views;
 
 import java.util.Scanner;
 import java.io.Serializable;
+import sudoku.Board;
+import sudoku.PlayGameControl;
+import sudoku.Serial;
+import sudoku.Sudoku;
+import sudoku.SudokuError;
 /**
  *
  * @author Jessica Marshall

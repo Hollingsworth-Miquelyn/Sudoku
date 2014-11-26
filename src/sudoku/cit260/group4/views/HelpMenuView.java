@@ -3,9 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sudoku;
+package sudoku.cit260.group4.views;
 import java.io.Serializable;
 import java.util.Scanner;
+import sudoku.HelpMenuControl;
+import sudoku.Menu;
+import sudoku.cit260.group4.views.sudoku.Serial;
+import sudoku.Sudoku;
+import sudoku.SudokuError;
 
 /**
  *

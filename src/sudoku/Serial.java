@@ -9,6 +9,6 @@ package sudoku;
  *
  * @author Heidi, Miquelyn, Jessica, Jessica
  */
-interface Serial {
+public interface Serial {
     
 }

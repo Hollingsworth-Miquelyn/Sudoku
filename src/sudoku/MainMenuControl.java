@@ -4,6 +4,8 @@
  * and open the template in the editor.
  */
 package sudoku;
+import sudoku.cit260.group4.views.NewGameView;
+import sudoku.cit260.group4.views.HelpMenuView;
 import java.io.Serializable;
 /**
  *
