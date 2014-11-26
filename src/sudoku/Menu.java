@@ -3,12 +3,14 @@ package sudoku;
 
 import sudoku.cit260.group4.views.MainMenuView;
 import java.util.Scanner;
+import sudoku.interfaces.DisplayInfo;
+import sudoku.interfaces.EnterInfo;
 
 /**
  *
  * @author Jessica M, Jessica W, Miquelyn, Heidi
  */
-public abstract class Menu {
+public abstract class Menu implements DisplayInfo, EnterInfo {
     private String [][] menuItems = null;
 
     public Menu() {
@@ -29,7 +31,7 @@ public abstract class Menu {
         this.menuItems = menuItems;
     }
     
-       public final void display() {
+       public  void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
 

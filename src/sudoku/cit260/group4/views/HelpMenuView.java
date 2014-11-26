@@ -8,7 +8,7 @@ import java.io.Serializable;
 import java.util.Scanner;
 import sudoku.HelpMenuControl;
 import sudoku.Menu;
-import sudoku.cit260.group4.views.sudoku.Serial;
+import sudoku.Serial;
 import sudoku.Sudoku;
 import sudoku.SudokuError;
 
