@@ -11,12 +11,13 @@ import sudoku.NewGameControl;
 import sudoku.Serial;
 import sudoku.Sudoku;
 import sudoku.SudokuError;
+import sudoku.interfaces.EnterInfo;
 
 /**
  *
  * @author Miquelyn Hollingsworth
  */
-public class NewGameView extends Menu implements Serial {
+public class NewGameView extends Menu implements EnterInfo {
     
     static final String[][] menuItems = {
         {"E", "Level Easy"},
@@ -77,4 +78,9 @@ public class NewGameView extends Menu implements Serial {
         }
         System.out.println("\t===============================================================\n");
     }*/
+
+    @Override
+    public void getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

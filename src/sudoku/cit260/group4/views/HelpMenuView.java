@@ -11,15 +11,17 @@ import sudoku.Menu;
 import sudoku.Serial;
 import sudoku.Sudoku;
 import sudoku.SudokuError;
+import sudoku.enums.Help;
+import sudoku.interfaces.EnterInfo;
 
 /**
  *
  * @author Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessical Marshall
  */
-public class HelpMenuView extends Menu implements Serial {
+public abstract class HelpMenuView extends Menu implements Help {
    
         
-    static final String[][] menuItems = {
+    /*static final String[][] menuItems = {
         {"B", "The Board"},
         {"G", "Sudoku Instructions"},
         {"S", "Score"},
@@ -27,9 +29,11 @@ public class HelpMenuView extends Menu implements Serial {
         {"H", "Hint"},
         {"Q", "Quit Help"}        
     };
+    */
     
     public HelpMenuView() {
          super(HelpMenuView.menuItems);
+        
     }
     
     // Create instance of the HelpMenuControl (action) class
@@ -37,12 +41,12 @@ public class HelpMenuView extends Menu implements Serial {
     
     // display the help menu and get the end users input selection
     //@Override
-    @Override
-    public String executeCommands(Object object) {       
+    
+    public void executeCommands() {       
               
         String command;
-        Scanner inFile = Sudoku.GetInputFile();
         
+        Scanner inFile = Sudoku.GetInputFile();
         do {
             
             this.display(); // display the menu
@@ -75,7 +79,7 @@ public class HelpMenuView extends Menu implements Serial {
             }
         } while (!command.equals("Q"));  
         
-         return command;
+         
     }
 /*
         // displays the help menu
@@ -89,5 +93,10 @@ public class HelpMenuView extends Menu implements Serial {
         System.out.println("\t===============================================================\n");
     }
 */  
+
+    @Override
+    public void getInput() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
     

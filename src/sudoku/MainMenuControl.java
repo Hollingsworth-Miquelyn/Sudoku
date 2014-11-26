@@ -22,7 +22,13 @@ public void newGame() {
     }        
     
     public void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView();
+        HelpMenuView helpMenu = new HelpMenuView() {
+
+            @Override
+            public String executeCommands(Object object) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+        };
         helpMenu.executeCommands(null);
     }
     
