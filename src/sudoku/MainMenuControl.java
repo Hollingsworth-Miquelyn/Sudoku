@@ -16,21 +16,13 @@ public class MainMenuControl implements Serial{
     public MainMenuControl() {
     }
     
-public void newGame() {
+    public void newGame() {
         NewGameView newGame = new NewGameView();
         newGame.executeCommands(null);
-    }        
+    }      
     
     public void displayHelpMenu() {
-        HelpMenuView helpMenu = new HelpMenuView() {
-
-            @Override
-            public String executeCommands(Object object) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        };
+        HelpMenuView helpMenu = new HelpMenuView();
         helpMenu.executeCommands(null);
     }
-    
 }
-

@@ -11,17 +11,17 @@ import sudoku.Menu;
 import sudoku.Serial;
 import sudoku.Sudoku;
 import sudoku.SudokuError;
-import sudoku.enums.Help;
+//import sudoku.enums.Help;
 import sudoku.interfaces.EnterInfo;
 
 /**
  *
  * @author Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessical Marshall
  */
-public abstract class HelpMenuView extends Menu implements Help {
+public class HelpMenuView extends Menu implements EnterInfo{
    
         
-    /*static final String[][] menuItems = {
+    static final String[][] menuItems = {
         {"B", "The Board"},
         {"G", "Sudoku Instructions"},
         {"S", "Score"},
@@ -29,26 +29,28 @@ public abstract class HelpMenuView extends Menu implements Help {
         {"H", "Hint"},
         {"Q", "Quit Help"}        
     };
-    */
+    
+    public HelpMenuControl helpMenuControl = new HelpMenuControl();
     
     public HelpMenuView() {
-         super(HelpMenuView.menuItems);
-        
+         super(HelpMenuView.menuItems);    
     }
     
-    // Create instance of the HelpMenuControl (action) class
-    private HelpMenuControl helpMenuControl = new HelpMenuControl();
+        public HelpMenuControl getHelpMenuControl() {
+        return helpMenuControl;
+    }
     
-    // display the help menu and get the end users input selection
-    //@Override
+    public void setHelpMenuControl(HelpMenuControl helpMenuControl){
+        this.helpMenuControl = helpMenuControl;
+    }
     
-    public void executeCommands() {       
+    @Override
+    public String executeCommands(Object object) {       
               
-        String command;
-        
+        String command; 
         Scanner inFile = Sudoku.GetInputFile();
+        
         do {
-            
             this.display(); // display the menu
             
             // get commaned entered
@@ -79,7 +81,7 @@ public abstract class HelpMenuView extends Menu implements Help {
             }
         } while (!command.equals("Q"));  
         
-         
+        return command;
     }
 /*
         // displays the help menu
@@ -93,10 +95,9 @@ public abstract class HelpMenuView extends Menu implements Help {
         System.out.println("\t===============================================================\n");
     }
 */  
-
     @Override
-    public void getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        public void getInput() {
+            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        }
 }
     
