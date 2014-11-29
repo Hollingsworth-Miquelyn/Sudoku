@@ -19,7 +19,7 @@ import sudoku.SudokuError;
  */
 public class PlayGameView implements Serial {
     static final String[][] menuItems = {
-        {"C", "Coordinates and Answer"},
+        {"C", "Enter Coordinates and Answer"},
         {"H", "Request Hint"},
         {"Q", "Quit Game"},
     };
@@ -73,14 +73,6 @@ public class PlayGameView implements Serial {
    
    //displays the game menu and board
    public final void display(Board userBoard) {
-        System.out.println("\n\t===============================================================");
-        System.out.println("\tEnter the letter associated with one of the following commands:");
-
-        for (int i = 0; i < PlayGameView.menuItems.length; i++) {
-            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
-        }
-        System.out.println("\t===============================================================\n");
-        
         System.out.println("\n\t      1  2  3  4  5  6  7  8  9");  //this is adding x axis coodinates
         System.out.println("\t    -----------------------------");       
         int ourBoard[][] = userBoard.getBoard();
@@ -98,5 +90,13 @@ public class PlayGameView implements Serial {
             System.out.println();
         }
         System.out.println("\t    ----------------------------\n");
+        
+        System.out.println("\n\t===============================================================");
+        System.out.println("\tEnter the letter associated with one of the following commands:");
+
+        for (int i = 0; i < PlayGameView.menuItems.length; i++) {
+            System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
+        }
+        System.out.println("\t===============================================================\n");
     }
 }

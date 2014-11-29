@@ -38,6 +38,7 @@ public abstract class Menu implements DisplayInfo, EnterInfo {
         for (int i = 0; i < MainMenuView.menuItems.length; i++) {
             System.out.println("\t   " + menuItems[i][0] + "\t" + menuItems[i][1]);
         }
+        System.out.println("\tPress Q at any time to go back.");
         System.out.println("\t===============================================================\n");
     }   
        

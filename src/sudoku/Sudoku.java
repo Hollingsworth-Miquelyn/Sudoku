@@ -42,6 +42,13 @@ public class Sudoku {
     
     public static void main(String[] args) {        
         Sudoku sudoku = new Sudoku();
+                System.out.println("\t===============================================================");
+                System.out.println(
+                "\tWelcome to Sudoku!!"
+                + "\n\tTo play start a new game and select a board you wish to play from and fill in all the entire 9x9 board."
+                + "\n\tFill in 1-9 on each column and 1-9 on each row as well as 1-9 on each 3x3 subsquares."
+                + "\n\tGood Luck!");
+                System.out.println("\t===============================================================\n");
         sudoku.getName();
         sudoku.displayWelcomeUser();
                
@@ -50,7 +57,7 @@ public class Sudoku {
         sudoku.displayGoodbyUser();
     }
     public void displayGoodbyUser(){
-        System.out.println("\nThanks for playing " + this.name + "\n");
+        System.out.println("\n\tThanks for playing " + this.name + "!\n");
     }
 private class GetName{
     private String name;
