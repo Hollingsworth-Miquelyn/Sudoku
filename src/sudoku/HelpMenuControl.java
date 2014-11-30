@@ -5,13 +5,32 @@
  */
 package sudoku;
 import java.io.Serializable;
-
+import  sudoku.enums.Help;
+import static sudoku.enums.Help.INSTRUCTIONS;
 /**
  *
  * @author Group of Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessica Marshall
  */
 public class HelpMenuControl implements Serial {
     
+    public String getHelpText(Help command) { //ADD throws exception
+        String helpText = "";
+        switch (command) {
+            case BOARD:
+            case INSTRUCTIONS:
+            case SCORE:
+            case DIFFICULTY:
+            case HINT:
+            case QUIT:
+                helpText = command.getHelpText();
+                break;
+            //default:
+                //throw new exception
+        }
+        return helpText;
+    }
+    
+    /*
     public HelpMenuControl() {
         
     } 
@@ -94,7 +113,11 @@ public class HelpMenuControl implements Serial {
         "\t~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
     }
     
-  
+  */
+
+    public void displayBoardHelp(Help help) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
 
 

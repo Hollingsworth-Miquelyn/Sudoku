@@ -11,6 +11,6 @@ package sudoku.interfaces;
  */
 public interface EnterInfo {
     
-    void getInput();
+    Object getInput(Object object);
     
 }

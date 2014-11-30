@@ -4,11 +4,10 @@
  * and open the template in the editor.
  */
 package sudoku.cit260.group4.views;
-import java.io.Serializable;
+//import java.io.Serializable;
 import java.util.Scanner;
-import sudoku.Menu;
 import sudoku.NewGameControl;
-import sudoku.Serial;
+//import sudoku.Serial;
 import sudoku.Sudoku;
 import sudoku.SudokuError;
 import sudoku.interfaces.EnterInfo;
@@ -19,7 +18,7 @@ import sudoku.interfaces.EnterInfo;
  */
 public class NewGameView extends Menu implements EnterInfo {
     
-    static final String[][] menuItems = {
+    private static final String[][] menuItems = {
         {"E", "Level Easy"},
         {"M", "Level Medium"},
         {"H", "Level Hard"},
@@ -34,8 +33,8 @@ public class NewGameView extends Menu implements EnterInfo {
     }
     
     //display new game menu and get end users input selection
-    @Override
-   public String executeCommands(Object object) {
+   @Override
+   public String getInput(Object object) {
        
     String command;
         Scanner inFile = Sudoku.GetInputFile();
@@ -68,7 +67,7 @@ public class NewGameView extends Menu implements EnterInfo {
         return command;
         }
    /*
-   //displays the new game menu
+   displays the new game menu
    public final void display() {
         System.out.println("\n\t===============================================================");
         System.out.println("\tEnter the letter associated with one of the following commands:");
@@ -79,8 +78,4 @@ public class NewGameView extends Menu implements EnterInfo {
         System.out.println("\t===============================================================\n");
     }*/
 
-    @Override
-    public void getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
 }

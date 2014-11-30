@@ -7,23 +7,21 @@ package sudoku.cit260.group4.views;
 import java.io.Serializable;
 import java.util.Scanner;
 import sudoku.HelpMenuControl;
-import sudoku.Menu;
 import sudoku.Serial;
 import sudoku.Sudoku;
 import sudoku.SudokuError;
-//import sudoku.enums.Help;
 import sudoku.interfaces.EnterInfo;
 
 /**
  *
  * @author Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessical Marshall
  */
-public class HelpMenuView extends Menu implements EnterInfo{
+public class HelpMenuView extends Menu implements EnterInfo {
    
         
-    static final String[][] menuItems = {
+    private static final String[][] menuItems = {
         {"B", "The Board"},
-        {"G", "Sudoku Instructions"},
+        {"I", "Sudoku Instructions"},
         {"S", "Score"},
         {"D", "Difficulty Help"},
         {"H", "Hint"},
@@ -45,9 +43,9 @@ public class HelpMenuView extends Menu implements EnterInfo{
     }
     
     @Override
-    public String executeCommands(Object object) {       
+    public String getInput(Object object) {       
               
-        String command; 
+        String command = this.getCommand(); 
         Scanner inFile = Sudoku.GetInputFile();
         
         do {
@@ -59,21 +57,21 @@ public class HelpMenuView extends Menu implements EnterInfo{
             
             switch (command) {
                 case "B":
-                    this.helpMenuControl.displayBoardHelp();
+                    this.displayHelp(Help.BOARD);
                     break;
-                case "G":
-                    this.helpMenuControl.displayGameHelp();
+                case "I":
+                    this.displayHelp(Help.INSTRUCTIONS);
                     break;                  
                 case "S":
-                    this.helpMenuControl.displayScoreHelp();
+                    this.displayHelp(Help.SCORE);
                     break; 
                 case "D":
-                    this.helpMenuControl.displayDifficultyHelp();
+                    this.displayHelp(Help.DIFFICULTY);
                     break; 
                 case "H":
-                    this.helpMenuControl.displayHintHelp();
+                    this.displayHelp(Help.HINT);
                     break;
-                case "Q": 
+                case "Q":
                     break;
                 default: 
                     new SudokuError().displayError("Invalid command. Please enter a valid command.");
@@ -83,6 +81,49 @@ public class HelpMenuView extends Menu implements EnterInfo{
         
         return command;
     }
+    
+    private void displayHelp(Help helpText) {
+        StringBuilder dividerLine = new StringBuilder(80);
+        for (int i = 0; i < 80; i++) {
+            dividerLine.insert(i, '~');
+        }
+        System.out.println("\t" + dividerLine.toString());
+        System.out.println(helpText.getHelpText());
+        System.out.println("\t" + dividerLine.toString());
+    }
+    
+    //nested class to define the text for each help item in the menu
+    private enum Help {
+    BOARD ("\tIf player becomes stuck while playing press the Hint button"
+        + "\n\tand the board will automatically fill in one cell for you."),
+    INSTRUCTIONS ("\tThe game board for Sudoku consist of a 9x9 grid"
+        + "\n\twith nine 3x3 subgrids. A Player fills in all empty cells wtih "
+        + "\n\t1 through 9. When a level is chosen, numbers are filled into the"
+        + "\n\tplaying board. The user then fills in the rest of the board."
+        + "\n\tEasy: 28 cells filled"
+        + "\n\tMedium: 24 cells filled"
+        + "\n\tHard: 20 cells filled"),
+    SCORE ("\tIf player becomes stuck while playing press the Hint button"
+        + "\n\tand the board will automatically fill in one cell for you."),
+    DIFFICULTY ("\tThe objective of the game is to place the numbers 1 through 9 in the empty cells. "
+        + "\n\tEach number can appear only once in each column and row."
+        + "\n\tEach number can appear only once in each 3x3 sub-square."),
+    HINT ("\n\tEach second is worth 1 point. You start with 6,000 points. "
+        + "\n\tFor every second it takes you to complete the game, the "
+        + "\n\tscore will decrease 1 point.."),
+    QUIT ("Quit");  
+    
+    String helpText;
+    
+    private Help(String helpText) {
+        this.helpText = helpText;
+    }
+    
+    public String getHelpText() {
+        return helpText;
+    }
+    
+}
 /*
         // displays the help menu
     public final void display() {
@@ -95,9 +136,6 @@ public class HelpMenuView extends Menu implements EnterInfo{
         System.out.println("\t===============================================================\n");
     }
 */  
-    @Override
-        public void getInput() {
-            throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        }
+    
 }
     

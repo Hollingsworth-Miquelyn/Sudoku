@@ -10,33 +10,33 @@ package sudoku.enums;
  * @author Jessica, Miquelyn, Heidi, Jessica
  */
 public enum Help {
-    B ("\tIf player becomes stuck while playing press the Hint button"
+    BOARD ("\tIf player becomes stuck while playing press the Hint button"
         + "\n\tand the board will automatically fill in one cell for you."),
-    G ("\tThe game board for Sudoku consist of a 9x9 grid"
+    INSTRUCTIONS ("\tThe game board for Sudoku consist of a 9x9 grid"
         + "\n\twith nine 3x3 subgrids. A Player fills in all empty cells wtih "
         + "\n\t1 through 9. When a level is chosen, numbers are filled into the"
         + "\n\tplaying board. The user then fills in the rest of the board."
         + "\n\tEasy: 28 cells filled"
         + "\n\tMedium: 24 cells filled"
         + "\n\tHard: 20 cells filled"),
-    S ("\tIf player becomes stuck while playing press the Hint button"
+    SCORE ("\tIf player becomes stuck while playing press the Hint button"
         + "\n\tand the board will automatically fill in one cell for you."),
-    D ("\tThe objective of the game is to place the numbers 1 through 9 in the empty cells. "
+    DIFFICULTY ("\tThe objective of the game is to place the numbers 1 through 9 in the empty cells. "
         + "\n\tEach number can appear only once in each column and row."
         + "\n\tEach number can appear only once in each 3x3 sub-square."),
-    H ("\n\tEach second is worth 1 point. You start with 6,000 points. "
+    HINT ("\n\tEach second is worth 1 point. You start with 6,000 points. "
         + "\n\tFor every second it takes you to complete the game, the "
         + "\n\tscore will decrease 1 point.."),
-    Q ("Quit");  
+    QUIT ("Quit");  
     
-    String value;
+    String helpText;
     
-    Help(String value) {
-        this.value = value;
+    private Help(String helpText) {
+        this.helpText = helpText;
     }
     
-    public String getValue() {
-        return value;
+    public String getHelpText() {
+        return helpText;
     }
     
 }

@@ -7,7 +7,6 @@ package sudoku.cit260.group4.views;
 import java.io.Serializable;
 import java.util.Scanner;
 import sudoku.MainMenuControl;
-import sudoku.Menu;
 import sudoku.Serial;
 import sudoku.Sudoku;
 import sudoku.SudokuError;
@@ -16,9 +15,9 @@ import sudoku.interfaces.EnterInfo;
  *
  * @author Miquelyn Hollingsworth
  */
-public class MainMenuView  extends Menu implements EnterInfo {                 
+public class MainMenuView extends Menu implements EnterInfo {                 
     
-    public static final String[][] menuItems = {
+    static final String[][] menuItems = {
         {"N", "New Game"},
         {"H", "Help"},
         {"Q", "Quit Sudoku"}      
@@ -37,8 +36,8 @@ public class MainMenuView  extends Menu implements EnterInfo {
     public void setMainMenuControl(MainMenuControl mainMenuControl) {
         this.mainMenuControl = mainMenuControl;
     }
-    @Override
-    public String executeCommands(Object object) {       
+   @Override
+    public String getInput(Object object) {       
 
         String command;
         Scanner inFile = Sudoku.GetInputFile();
@@ -79,8 +78,5 @@ public class MainMenuView  extends Menu implements EnterInfo {
     }   
  */  
 
-    @Override
-    public void getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
