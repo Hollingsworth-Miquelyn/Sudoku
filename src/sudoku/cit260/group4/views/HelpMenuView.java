@@ -43,7 +43,7 @@ public class HelpMenuView extends Menu implements EnterInfo {
     }
     
     @Override
-    public String getInput(Object object) {       
+    public String getInput(Object object) {
               
         String command = this.getCommand(); 
         Scanner inFile = Sudoku.GetInputFile();
