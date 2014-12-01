@@ -3,7 +3,7 @@ package sudoku.cit260.group4.views;
 
 import sudoku.cit260.group4.views.MainMenuView;
 import java.util.Scanner;
-import sudoku.Sudoku;
+import sudoku.controls.Sudoku;
 import sudoku.SudokuError;
 //import sudoku.interfaces.DisplayInfo;
 //import sudoku.interfaces.EnterInfo;

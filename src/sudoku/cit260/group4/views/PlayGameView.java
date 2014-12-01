@@ -9,9 +9,9 @@ package sudoku.cit260.group4.views;
 import java.util.Scanner;
 import java.io.Serializable;
 import sudoku.Board;
-import sudoku.PlayGameControl;
+import sudoku.controls.PlayGameControl;
 import sudoku.Serial;
-import sudoku.Sudoku;
+import sudoku.controls.Sudoku;
 import sudoku.SudokuError;
 /**
  *

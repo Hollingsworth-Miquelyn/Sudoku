@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sudoku;
+package sudoku.controls;
 
+import sudoku.Board;
 import sudoku.cit260.group4.views.PlayGameView;
 
 /**

@@ -1,8 +1,11 @@
 
-package sudoku;
+package sudoku.controls;
 import java.io.Serializable;
 
 import java.util.Scanner;
+import sudoku.Board;
+import sudoku.Hint;
+import sudoku.Serial;
 
 /**
  *

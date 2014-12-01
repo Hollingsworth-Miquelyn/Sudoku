@@ -6,9 +6,9 @@
 package sudoku.cit260.group4.views;
 //import java.io.Serializable;
 import java.util.Scanner;
-import sudoku.NewGameControl;
+import sudoku.controls.NewGameControl;
 //import sudoku.Serial;
-import sudoku.Sudoku;
+import sudoku.controls.Sudoku;
 import sudoku.SudokuError;
 import sudoku.interfaces.EnterInfo;
 

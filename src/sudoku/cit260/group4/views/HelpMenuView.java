@@ -6,9 +6,9 @@
 package sudoku.cit260.group4.views;
 import java.io.Serializable;
 import java.util.Scanner;
-import sudoku.HelpMenuControl;
+import sudoku.controls.HelpMenuControl;
 import sudoku.Serial;
-import sudoku.Sudoku;
+import sudoku.controls.Sudoku;
 import sudoku.SudokuError;
 import sudoku.interfaces.EnterInfo;
 
@@ -94,24 +94,25 @@ public class HelpMenuView extends Menu implements EnterInfo {
     
     //nested class to define the text for each help item in the menu
     private enum Help {
-    BOARD ("\tIf player becomes stuck while playing press the Hint button"
-        + "\n\tand the board will automatically fill in one cell for you."),
-    INSTRUCTIONS ("\tThe game board for Sudoku consist of a 9x9 grid"
+    BOARD ("\tThe game board for Sudoku consist of a 9x9 grid"
+                + "\n\twith nine 3x3 subgrids. A Player fills in all empty cells wtih "
+                + "\n\t1 through 9."),
+    INSTRUCTIONS ("\tThe objective of the game is to place the numbers 1 through 9 in the empty cells. "
+        + "\n\tEach number can appear only once in each column and row."
+        + "\n\tEach number can appear only once in each 3x3 sub-square."),
+    SCORE ("\tEach second is worth 1 point. You start with 6,000 points. "
+        + "\n\tFor every second it takes you to complete the game, the "
+        + "\n\tscore will decrease 1 point.."),
+    DIFFICULTY ("\tThe game board for Sudoku consist of a 9x9 grid"
         + "\n\twith nine 3x3 subgrids. A Player fills in all empty cells wtih "
         + "\n\t1 through 9. When a level is chosen, numbers are filled into the"
         + "\n\tplaying board. The user then fills in the rest of the board."
         + "\n\tEasy: 28 cells filled"
         + "\n\tMedium: 24 cells filled"
         + "\n\tHard: 20 cells filled"),
-    SCORE ("\tIf player becomes stuck while playing press the Hint button"
+    HINT ("\n\tIf player becomes stuck while playing press the Hint button"
         + "\n\tand the board will automatically fill in one cell for you."),
-    DIFFICULTY ("\tThe objective of the game is to place the numbers 1 through 9 in the empty cells. "
-        + "\n\tEach number can appear only once in each column and row."
-        + "\n\tEach number can appear only once in each 3x3 sub-square."),
-    HINT ("\n\tEach second is worth 1 point. You start with 6,000 points. "
-        + "\n\tFor every second it takes you to complete the game, the "
-        + "\n\tscore will decrease 1 point.."),
-    QUIT ("Quit");  
+    QUIT ("Quit");   
     
     String helpText;
     

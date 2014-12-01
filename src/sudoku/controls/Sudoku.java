@@ -1,6 +1,6 @@
 
 
-package sudoku;
+package sudoku.controls;
 
 import sudoku.cit260.group4.views.MainMenuView;
 import java.util.Scanner;

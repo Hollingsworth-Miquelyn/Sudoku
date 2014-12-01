@@ -3,8 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package sudoku;
+package sudoku.controls;
 import java.io.Serializable;
+import sudoku.Serial;
 import  sudoku.enums.Help;
 import static sudoku.enums.Help.INSTRUCTIONS;
 /**
@@ -115,9 +116,7 @@ public class HelpMenuControl implements Serial {
     
   */
 
-    public void displayBoardHelp(Help help) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 }
 
 

@@ -11,6 +11,6 @@ package sudoku.interfaces;
  */
 public interface DisplayInfo {
     
-    void display();
+    Object display(Object Object);
     
 }
