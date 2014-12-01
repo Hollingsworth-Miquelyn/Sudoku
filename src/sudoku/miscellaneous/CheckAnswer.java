@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-package sudoku;
+package sudoku.miscellaneous;
 import java.io.Serializable;
 /**
  * @author  Jessica lesson2

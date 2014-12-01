@@ -5,7 +5,7 @@
  */
 package sudoku.controls;
 import java.io.Serializable;
-import sudoku.Serial;
+import sudoku.miscellaneous.Serial;
 import  sudoku.enums.Help;
 import static sudoku.enums.Help.INSTRUCTIONS;
 /**

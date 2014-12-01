@@ -9,7 +9,7 @@ import java.util.Scanner;
 import sudoku.controls.NewGameControl;
 //import sudoku.Serial;
 import sudoku.controls.Sudoku;
-import sudoku.SudokuError;
+import sudoku.miscellaneous.SudokuError;
 import sudoku.interfaces.EnterInfo;
 
 /**

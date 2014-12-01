@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package sudoku;
+import sudoku.miscellaneous.SudokuError;
 import java.io.Serializable;
 /**
  *

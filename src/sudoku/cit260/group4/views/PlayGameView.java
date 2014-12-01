@@ -10,9 +10,9 @@ import java.util.Scanner;
 import java.io.Serializable;
 import sudoku.Board;
 import sudoku.controls.PlayGameControl;
-import sudoku.Serial;
+import sudoku.miscellaneous.Serial;
 import sudoku.controls.Sudoku;
-import sudoku.SudokuError;
+import sudoku.miscellaneous.SudokuError;
 /**
  *
  * @author Jessica Marshall

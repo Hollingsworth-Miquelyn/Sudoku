@@ -1,5 +1,5 @@
 
-package sudoku;
+package sudoku.miscellaneous;
 
 import java.io.Serializable;
 import java.util.Random;

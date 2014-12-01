@@ -5,6 +5,7 @@
  */
 
 package sudoku;
+import sudoku.miscellaneous.SudokuError;
 import java.io.Serializable;
 /**
  *
