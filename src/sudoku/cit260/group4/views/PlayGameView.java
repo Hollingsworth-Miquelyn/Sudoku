@@ -67,8 +67,8 @@ public class PlayGameView implements Serial {
                     case "Q":
                         break;
                     default:
-                        //System.out.println(ErrorType.ERROR107.getMessage());
-                        new SudokuError().displayError("Invalid command. Please enter a valid command.");
+                        System.out.println(ErrorType.ERROR107.getMessage());
+                        //new SudokuError().displayError("Invalid command. Please enter a valid command.");
                         continue;
                 }
             }
