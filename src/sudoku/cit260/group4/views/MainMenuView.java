@@ -12,6 +12,7 @@ import sudoku.controls.Sudoku;
 import sudoku.miscellaneous.SudokuError;
 import sudoku.interfaces.EnterInfo;
 import exception.SudokuException;
+import sudoku.enums.ErrorType;
 /**
  *
  * @author Miquelyn Hollingsworth
@@ -38,9 +39,9 @@ public class MainMenuView extends Menu implements EnterInfo {
         this.mainMenuControl = mainMenuControl;
     }
    @Override
-    public String getInput(Object object) {       
+    public String getInput(Object object){       
 
-        String command;
+        String command = null;
         Scanner inFile = Sudoku.GetInputFile();
         
         do {
@@ -66,8 +67,10 @@ public class MainMenuView extends Menu implements EnterInfo {
                     continue; 
             } 
             }
-            catch (SudokuException e){
-          System.out.println("\n" + e.getMessage());
+            catch (IndexOutOfBoundsException e){
+                //throw new SudokuException(ErrorType.ERROR105.getMessage());
+                System.out.println("\n" + e.getMessage());
+                
                 
             }
         } while (!command.equals("Q"));

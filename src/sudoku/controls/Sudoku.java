@@ -4,6 +4,8 @@ package sudoku.controls;
 
 import sudoku.cit260.group4.views.MainMenuView;
 import java.util.Scanner;
+import exception.SudokuException;
+import sudoku.enums.ErrorType;
 
 
 /**
@@ -41,6 +43,7 @@ public class Sudoku {
     }
     
     public static void main(String[] args) {        
+                   
         Sudoku sudoku = new Sudoku();
                 System.out.println("\t===============================================================");
                 System.out.println(
@@ -53,9 +56,19 @@ public class Sudoku {
         sudoku.displayWelcomeUser();
                
         MainMenuView mainMenu = new MainMenuView();
+        try {
         mainMenu.getInput(null);
+        }
+        catch (Throwable ex){
+            System.out.println(ErrorType.ERROR105.getMessage());
+        }
+        finally {
+    Sudoku.inFile.close();
+    }
         sudoku.displayGoodbyUser();
     }
+
+      
     public void displayGoodbyUser(){
         System.out.println("\n\tThanks for playing " + this.name + "!\n");
     }
@@ -68,4 +81,5 @@ private class GetName{
         this.name = input.next();
     }
 }
+
 }

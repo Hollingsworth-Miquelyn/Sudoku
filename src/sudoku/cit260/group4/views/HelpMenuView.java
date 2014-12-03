@@ -11,6 +11,7 @@ import sudoku.miscellaneous.Serial;
 import sudoku.controls.Sudoku;
 import sudoku.miscellaneous.SudokuError;
 import sudoku.interfaces.EnterInfo;
+import exception.SudokuException;
 
 /**
  *
@@ -45,10 +46,11 @@ public class HelpMenuView extends Menu implements EnterInfo {
     @Override
     public String getInput(Object object) {
               
-        String command = this.getCommand(); 
+        String command = null; 
         Scanner inFile = Sudoku.GetInputFile();
         
         do {
+            try {
             this.display(); // display the menu
             
             // get commaned entered
@@ -76,6 +78,10 @@ public class HelpMenuView extends Menu implements EnterInfo {
                 default: 
                     new SudokuError().displayError("Invalid command. Please enter a valid command.");
                     continue;
+            }
+            }
+            catch (IndexOutOfBoundsException e) {
+                System.out.println("\n + e.getmessage()");
             }
         } while (!command.equals("Q"));  
         

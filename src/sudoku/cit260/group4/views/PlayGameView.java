@@ -42,11 +42,11 @@ public class PlayGameView implements Serial {
     //Play Game Menu and Board
    public void getInput(Board userBoard) {
        
-    String command;
+    String command = null;
         Scanner inFile = Sudoku.GetInputFile();
         
         do {
-            
+            try{
             this.display(userBoard); // display the menu
             
             // get commaned entered
@@ -66,10 +66,16 @@ public class PlayGameView implements Serial {
                     new SudokuError().displayError("Invalid command. Please enter a valid command.");
                     continue;
             }
+            }
+            catch (IndexOutOfBoundsException e){
+                //throw new SudokuException(ErrorType.ERROR105.getMessage());
+                System.out.println("\n" + e.getMessage());
+            }
         } while (!command.equals("Q"));
         
         return;
    }
+   
    
    //displays the game menu and board
    public final void display(Board userBoard) {
