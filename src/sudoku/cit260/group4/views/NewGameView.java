@@ -36,11 +36,11 @@ public class NewGameView extends Menu implements EnterInfo {
    @Override
    public String getInput(Object object) {
        
-    String command;
+    String command = null;
         Scanner inFile = Sudoku.GetInputFile();
         
         do {
-            
+            try {
             this.display(); // display the menu
             
             // get commaned entered
@@ -61,6 +61,10 @@ public class NewGameView extends Menu implements EnterInfo {
                 default:
                     new SudokuError().displayError("Invalid command. Please enter a valid command.");
                     continue;
+            }
+            }
+            catch (IndexOutOfBoundsException e) {
+                System.out.println("\n" + e.getMessage());
             }
         } while (!command.equals("Q"));
         
