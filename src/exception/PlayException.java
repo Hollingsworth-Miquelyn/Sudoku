@@ -7,7 +7,7 @@ package exception;
 
 /**
  *
- * @author Jessica, Miquelyn, Heidi, Jessica
+ * @author Jessica Marshall
  */
 
 public class PlayException extends Exception {
