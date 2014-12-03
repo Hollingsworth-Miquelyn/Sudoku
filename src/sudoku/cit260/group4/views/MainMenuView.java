@@ -11,6 +11,7 @@ import sudoku.miscellaneous.Serial;
 import sudoku.controls.Sudoku;
 import sudoku.miscellaneous.SudokuError;
 import sudoku.interfaces.EnterInfo;
+import exception.SudokuException;
 /**
  *
  * @author Miquelyn Hollingsworth
@@ -43,6 +44,8 @@ public class MainMenuView extends Menu implements EnterInfo {
         Scanner inFile = Sudoku.GetInputFile();
         
         do {
+            try {
+            
             this.display(); // display the menu
 
             // get commaned entered
@@ -60,7 +63,12 @@ public class MainMenuView extends Menu implements EnterInfo {
                     break;
                 default: 
                     new SudokuError().displayError("Invalid command. Please enter a valid command.");
-                    continue;                    
+                    continue; 
+            } 
+            }
+            catch (SudokuException e){
+          System.out.println("\n" + e.getMessage());
+                
             }
         } while (!command.equals("Q"));
 

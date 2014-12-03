@@ -5,6 +5,10 @@ import sudoku.cit260.group4.views.MainMenuView;
 import java.util.Scanner;
 import sudoku.controls.Sudoku;
 import sudoku.miscellaneous.SudokuError;
+import exception.MenuException;
+import exception.SudokuException;
+import sudoku.miscellaneous.SudokuError;
+import sudoku.enums.ErrorType;
 //import sudoku.interfaces.DisplayInfo;
 //import sudoku.interfaces.EnterInfo;
 
@@ -55,23 +59,23 @@ public abstract class Menu /*implements DisplayInfo, EnterInfo*/ {
         return false;
     }
 
-    protected final String getCommand() {
-
+    protected final String getCommand() throws SudokuException {
+        
         Scanner inFile = Sudoku.GetInputFile();
         String command;
         boolean valid = false;
+        
         do {
             command = inFile.nextLine();
             command = command.trim().toUpperCase();
             valid = validCommand(command);
             if (!validCommand(command)) {
-                new SudokuError().displayError("Invalid command. Please enter a valid command.");
-                continue;
+                throw new SudokuException(ErrorType.ERROR105.getMessage());  
             }
+            return command;
                 
         } while (!valid);
         
-        return command;
     }
    
 }
