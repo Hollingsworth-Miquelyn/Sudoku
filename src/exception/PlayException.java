@@ -10,20 +10,20 @@ package exception;
  * @author Jessica, Miquelyn, Heidi, Jessica
  */
 
-public class MenuException extends Exception {
+public class PlayException extends Exception {
 
-    public MenuException() {
+    public PlayException() {
     }
 
-    public MenuException(String message) {
+    public PlayException(String message) {
         super(message);
     }
 
-    public MenuException(String message, Throwable cause) {
+    public PlayException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public MenuException(Throwable cause) {
+    public PlayException(Throwable cause) {
         super(cause);
     }
     

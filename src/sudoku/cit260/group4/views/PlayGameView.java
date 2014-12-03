@@ -13,6 +13,9 @@ import sudoku.controls.PlayGameControl;
 import sudoku.miscellaneous.Serial;
 import sudoku.controls.Sudoku;
 import sudoku.miscellaneous.SudokuError;
+import exception.GameException;
+import sudoku.enums.ErrorType;
+import exception.PlayException;
 /**
  *
  * @author Jessica Marshall
@@ -46,29 +49,30 @@ public class PlayGameView implements Serial {
         Scanner inFile = Sudoku.GetInputFile();
         
         do {
-            try{
-            this.display(userBoard); // display the menu
             
-            // get commaned entered
-            command = inFile.nextLine();
-            command = command.trim().toUpperCase();
-            
-            switch (command) {
-                case "C":
-                    this.playGameControl.enterCoordinates(userBoard);
-                    break;
-                case "H":
-                    this.playGameControl.requestHint(userBoard);
-                    break;
-                case "Q":
-                    break;
-                default:
-                    new SudokuError().displayError("Invalid command. Please enter a valid command.");
-                    continue;
-            }
+            try {
+                this.display(userBoard); // display the menu
+
+                // get commaned entered
+                command = inFile.nextLine();
+                command = command.trim().toUpperCase();
+
+                switch (command) {
+                    case "C":
+                        this.playGameControl.enterCoordinates(userBoard);
+                        break;
+                    case "H":
+                        this.playGameControl.requestHint(userBoard);
+                        break;
+                    case "Q":
+                        break;
+                    default:
+                        //System.out.println(ErrorType.ERROR107.getMessage());
+                        new SudokuError().displayError("Invalid command. Please enter a valid command.");
+                        continue;
+                }
             }
             catch (IndexOutOfBoundsException e){
-                //throw new SudokuException(ErrorType.ERROR105.getMessage());
                 System.out.println("\n" + e.getMessage());
             }
         } while (!command.equals("Q"));

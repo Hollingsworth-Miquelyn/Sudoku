@@ -7,11 +7,12 @@ package sudoku.enums;
 
 /**
  *
- * @author Jessica
+ * @author Jessica, Miquelyn, Heidi, Jessica
  */
 public enum ErrorType {
      ERROR105 ("Invalid command. Please enter a valid command."),
-     ERROR106 ("You must start a new game first.");
+     ERROR106 ("You must start a new game first."),
+     ERROR107 ("Coorinates and Answer must be between 1 and 9");
     String message;
     
     ErrorType(String message) {

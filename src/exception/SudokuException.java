@@ -7,7 +7,7 @@ package exception;
 
 /**
  *
- * @author Jessica
+ * @author Jessica W, Jessica M, Miquelyn, Heidi
  */
 public class SudokuException extends Exception {
 

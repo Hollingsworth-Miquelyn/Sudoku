@@ -6,6 +6,9 @@ import java.util.Scanner;
 import sudoku.Board;
 import sudoku.miscellaneous.Hint;
 import sudoku.miscellaneous.Serial;
+import sudoku.miscellaneous.SudokuError;
+import exception.GameException;
+import sudoku.enums.ErrorType;
 
 /**
  *

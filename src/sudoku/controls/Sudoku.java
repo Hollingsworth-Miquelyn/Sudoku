@@ -60,9 +60,10 @@ public class Sudoku {
         mainMenu.getInput(null);
         }
         catch (Throwable ex){
-            System.out.println(ErrorType.ERROR105.getMessage());
+            System.out.println(ErrorType.ERROR107.getMessage());
         }
         finally {
+    //Change later to not close game when there is an error in corrdinates        
     Sudoku.inFile.close();
     }
         sudoku.displayGoodbyUser();
