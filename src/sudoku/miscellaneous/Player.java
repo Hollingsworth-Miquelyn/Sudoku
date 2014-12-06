@@ -3,8 +3,10 @@
  * and open the template in the editor.
  */
 package sudoku.miscellaneous;
+import exception.MiscellaneousException;
 import sudoku.miscellaneous.Serial;
 import java.io.Serializable;
+import sudoku.enums.ErrorType;
 /**
  *
  * @author Jessica, Jessica, Heidi, Miquelyn Lesson 8 Paired
@@ -33,13 +35,13 @@ public class Player implements Serial{
         this.gamesPlayed = gamesPlayed;
     }
  
-    private double getWinningPercentage() {
+    private double getWinningPercentage() throws MiscellaneousException{
                
         double winRatio = (double) wins / gamesPlayed *100;
         
         if (winRatio < 0 || winRatio > 100 || gamesPlayed <= 0 ){
           
-            System.out.println("Oops! \n" + "Invalid Amount");
+            throw new MiscellaneousException(ErrorType.ERROR110.getMessage());
         }
         else {
 
@@ -47,7 +49,7 @@ public class Player implements Serial{
                 + wins + " Wins and "
                 + gamesPlayed + " games played.");
         return winRatio*100;}
-        return 0;
+        //return 0;
     }
  private void averageScore() {
         int pastScores[] = { 15, 19, 8, 12, 20 };  
