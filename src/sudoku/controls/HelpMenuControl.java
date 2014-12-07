@@ -4,17 +4,19 @@
  * and open the template in the editor.
  */
 package sudoku.controls;
+import exception.SudokuException;
 import java.io.Serializable;
+import sudoku.enums.ErrorType;
 import sudoku.miscellaneous.Serial;
 import  sudoku.enums.Help;
 import static sudoku.enums.Help.INSTRUCTIONS;
 /**
  *
- * @author Group of Heidi Spackman, Miquelyn Hollingsworth, Jessica West, Jessica Marshall
+ * @author Miquelyn
  */
 public class HelpMenuControl implements Serial {
     
-    public String getHelpText(Help command) { //ADD throws exception
+    public String getHelpText(Help command) throws SudokuException{ 
         String helpText = "";
         switch (command) {
             case BOARD:
@@ -25,8 +27,8 @@ public class HelpMenuControl implements Serial {
             case QUIT:
                 helpText = command.getHelpText();
                 break;
-            //default:
-                //throw new exception
+            default:
+                throw new SudokuException(ErrorType.ERROR105.getMessage());
         }
         return helpText;
     }
