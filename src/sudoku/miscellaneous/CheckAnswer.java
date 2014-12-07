@@ -6,6 +6,8 @@
 
 package sudoku.miscellaneous;
 import java.io.Serializable;
+import exception.MiscellaneousException;
+import sudoku.enums.ErrorType;
 /**
  * @author  Jessica lesson2
  * @author Heidi Spackman 
@@ -44,44 +46,55 @@ public class CheckAnswer implements Serial {
         System.out.print(boardEasyAnswer);
     }
     
-    private void checking(){
+    private void checking()throws MiscellaneousException{
         
-      
+        try {
+          
+        
             if(cell1 < 1){ 
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell2 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell3 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                    throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell4 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                    throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell5 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                    throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell6 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                    throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell7 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                    throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell8 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                    throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else if (cell9 < 1){
-                System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
-                b = false;
+                    throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
+                //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
+                //b = false;
                 }
                 else {
                 
@@ -95,8 +108,12 @@ public class CheckAnswer implements Serial {
                                                        }
                         System.out.println(cellanswer);
                     }
-        
+        }
+            catch (ClassCastException e){
+                System.out.println("\n" + e.getMessage());
+            
             }
+    }
 
     //returns true if column is correct.
     private static boolean colContains(int[][] boardEasyAnswer, int col, int value){
