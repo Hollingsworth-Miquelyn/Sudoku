@@ -48,7 +48,9 @@ public class CheckAnswer implements Serial {
     
     private void checking()throws MiscellaneousException{
         
-      
+        try {
+          
+        
             if(cell1 < 1){ 
                 throw new MiscellaneousException(ErrorType.ERROR109.getMessage());
                 //System.out.println("Error, cannot have a negative number as an answer.\n Try Again!");
@@ -106,8 +108,12 @@ public class CheckAnswer implements Serial {
                                                        }
                         System.out.println(cellanswer);
                     }
-        
+        }
+            catch (ClassCastException e){
+                System.out.println("\n" + e.getMessage());
+            
             }
+    }
 
     //returns true if column is correct.
     private static boolean colContains(int[][] boardEasyAnswer, int col, int value){
