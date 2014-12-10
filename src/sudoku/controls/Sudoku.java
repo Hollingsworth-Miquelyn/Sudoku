@@ -2,11 +2,12 @@
 
 package sudoku.controls;
 
+import sudoku.cit260.group4.views.MainFrame;
 import sudoku.cit260.group4.views.MainMenuView;
 import java.util.Scanner;
 import exception.SudokuException;
 import sudoku.enums.ErrorType;
-
+import sudoku.cit260.group4.views.MainFrame;
 
 /**
  *
@@ -14,6 +15,7 @@ import sudoku.enums.ErrorType;
  */
 
 public class Sudoku {
+    private static MainFrame mainFrame;
 
     public static Scanner getInFile() {
         return inFile;
@@ -42,9 +44,34 @@ public class Sudoku {
         System.out.println("\nWelcome " + this.name + "\n");
     }
     
-    public static void main(String[] args) {        
-                   
-        Sudoku sudoku = new Sudoku();
+    public static void main(String[] args) {    
+        Sudoku sudoku = null;
+        try {
+            sudoku = new Sudoku();
+           
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Sudoku.mainFrame = new MainFrame();
+                    
+                    Sudoku.mainFrame.setVisible(true);
+                }
+            });
+        }
+        catch (Throwable ex){
+            ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+            ErrorType.displayErorrMsg(ex.getStackTrace().toString());
+        }
+        finally {
+            if (Sudoku.mainFrame != null) {
+                Sudoku.mainFrame.dispose();
+            }
+        }
+    }
+        
+        
+        
+        
+/*        
                 System.out.println("\t========================================================================");
                 System.out.println(
                 "\tWelcome to Sudoku!!"
@@ -68,7 +95,7 @@ public class Sudoku {
     }
         sudoku.displayGoodbyUser();
     }
-
+*/
       
     public void displayGoodbyUser(){
         System.out.println("\n\tThanks for playing " + this.name + "!\n");
