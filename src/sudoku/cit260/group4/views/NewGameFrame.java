@@ -57,29 +57,27 @@ public class NewGameFrame extends javax.swing.JFrame {
         jNewGameTitle.setBackground(new java.awt.Color(255, 153, 255));
 
         jNewGameLabel.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
-        jNewGameLabel.setText("Choose New Game Level");
+        jNewGameLabel.setText("Choose a Level");
 
         javax.swing.GroupLayout jNewGameTitleLayout = new javax.swing.GroupLayout(jNewGameTitle);
         jNewGameTitle.setLayout(jNewGameTitleLayout);
         jNewGameTitleLayout.setHorizontalGroup(
             jNewGameTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jNewGameTitleLayout.createSequentialGroup()
-                .addGap(51, 51, 51)
+                .addGap(72, 72, 72)
                 .addComponent(jNewGameLabel)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jNewGameTitleLayout.setVerticalGroup(
             jNewGameTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jNewGameTitleLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jNewGameLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jNewGameTitleLayout.createSequentialGroup()
+                .addGap(0, 26, Short.MAX_VALUE)
+                .addComponent(jNewGameLabel))
         );
 
         jButtonPanel.setBackground(new java.awt.Color(255, 204, 255));
         jButtonPanel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jEasyButton.setBackground(new java.awt.Color(255, 255, 255));
         jEasyButton.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
         jEasyButton.setText("Easy");
         jEasyButton.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -111,9 +109,9 @@ public class NewGameFrame extends javax.swing.JFrame {
             .addGroup(jButtonPanelLayout.createSequentialGroup()
                 .addGap(34, 34, 34)
                 .addComponent(jEasyButton)
-                .addGap(68, 68, 68)
+                .addGap(18, 18, 18)
                 .addComponent(jMediumButton)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
                 .addComponent(jHardButton)
                 .addGap(29, 29, 29))
         );
@@ -142,13 +140,14 @@ public class NewGameFrame extends javax.swing.JFrame {
             jNewGamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jNewGameTitle, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(jNewGamePanelLayout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addComponent(jButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(57, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jNewGamePanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jQuitButton)
-                .addGap(222, 222, 222))
+                .addGroup(jNewGamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jNewGamePanelLayout.createSequentialGroup()
+                        .addGap(41, 41, 41)
+                        .addComponent(jButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jNewGamePanelLayout.createSequentialGroup()
+                        .addGap(163, 163, 163)
+                        .addComponent(jQuitButton)))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
         jNewGamePanelLayout.setVerticalGroup(
             jNewGamePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,9 +155,9 @@ public class NewGameFrame extends javax.swing.JFrame {
                 .addComponent(jNewGameTitle, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jButtonPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 53, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jQuitButton)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
