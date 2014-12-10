@@ -1,5 +1,6 @@
 package sudoku.cit260.group4.views;
 
+import sudoku.controls.MainMenuControl;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,10 +9,12 @@ package sudoku.cit260.group4.views;
 
 /**
  *
- * @author Jessica
+ * @author Jessica, Miquelyn, Jessica, Heidi
  */
 public class MainFrame extends javax.swing.JFrame {
-
+    
+    private MainMenuControl mainCommands = new MainMenuControl();
+    
     /**
      * Creates new form MainFrame
      */
@@ -19,6 +22,13 @@ public class MainFrame extends javax.swing.JFrame {
         initComponents();
     }
 
+    public MainMenuControl getMainCommands(){
+        return mainCommands;
+    }
+    public void setMainCommands(MainMenuControl mainCommands){
+        this.mainCommands = mainCommands;
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -72,12 +82,27 @@ public class MainFrame extends javax.swing.JFrame {
 
         newGame.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         newGame.setText("New Game");
+        newGame.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                newGameMouseClicked(evt);
+            }
+        });
 
         quit.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         quit.setText("Quit");
+        quit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                quitActionPerformed(evt);
+            }
+        });
 
         help.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         help.setText("Help");
+        help.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                helpMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpMenuItemsLayout = new javax.swing.GroupLayout(jpMenuItems);
         jpMenuItems.setLayout(jpMenuItemsLayout);
@@ -160,42 +185,20 @@ public class MainFrame extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    /**
-     * @param args the command line arguments
-     
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    private void quitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quitActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_quitActionPerformed
 
-        /* Create and display the form */
-        /*
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainFrame().setVisible(true);
-            }
-        });
-    }
-*/
+    private void newGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newGameMouseClicked
+        NewGameView newGame = new NewGameView();
+        newGame.getInput(null);
+    }//GEN-LAST:event_newGameMouseClicked
+
+    private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
+        HelpMenuView helpMenu = new HelpMenuView();
+        helpMenu.getInput(null);
+    }//GEN-LAST:event_helpMouseClicked
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton help;
     private javax.swing.JTextArea jTextArea1;

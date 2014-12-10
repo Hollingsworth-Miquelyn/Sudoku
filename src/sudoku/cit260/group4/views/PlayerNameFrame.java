@@ -1,5 +1,7 @@
 package sudoku.cit260.group4.views;
 
+import sudoku.controls.NewGameControl;
+import sudoku.controls.MainMenuControl;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,14 +10,15 @@ package sudoku.cit260.group4.views;
 
 /**
  *
- * @author Jessica
+ * @author Jessica, Miquelyn, Jessica, Heidi
  */
-public class EnterPlayerName extends javax.swing.JFrame {
+public class PlayerNameFrame extends javax.swing.JFrame {
 
+    private NewGameControl newGameCommands = null;
     /**
      * Creates new form EnterPlayerName
      */
-    public EnterPlayerName() {
+    public PlayerNameFrame() {
         initComponents();
     }
 
@@ -46,6 +49,11 @@ public class EnterPlayerName extends javax.swing.JFrame {
 
         jNameButton.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jNameButton.setText("Continue");
+        jNameButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jNameButtonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jpNameBodyLayout = new javax.swing.GroupLayout(jpNameBody);
         jpNameBody.setLayout(jpNameBodyLayout);
@@ -90,41 +98,11 @@ public class EnterPlayerName extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    MainMenuControl mainMenuControl = new MainMenuControl();
+    private void jNameButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jNameButtonMouseClicked
+        this.mainMenuControl.newGame();
+    }//GEN-LAST:event_jNameButtonMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-//    public static void main(String args[]) {
-//        /* Set the Nimbus look and feel */
-//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(EnterPlayerName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(EnterPlayerName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(EnterPlayerName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(EnterPlayerName.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-//
-//        /* Create and display the form */
-//        java.awt.EventQueue.invokeLater(new Runnable() {
-//            public void run() {
-//                new EnterPlayerName().setVisible(true);
-//            }
-//        });
-//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jNameButton;
@@ -133,3 +111,4 @@ public class EnterPlayerName extends javax.swing.JFrame {
     private javax.swing.JPanel jpNameBody;
     // End of variables declaration//GEN-END:variables
 }
+
