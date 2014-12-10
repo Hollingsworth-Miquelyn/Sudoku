@@ -1,6 +1,7 @@
 package sudoku.cit260.group4.views;
 
 import sudoku.controls.MainMenuControl;
+import sudoku.cit260.group4.views.NewGameFrame;
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -55,30 +56,29 @@ public class MainFrame extends javax.swing.JFrame {
         jpBody.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jpTitle.setBackground(new java.awt.Color(255, 153, 255));
-        jpTitle.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
-        jlTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 24)); // NOI18N
-        jlTitle.setText("Sudoku");
+        jlTitle.setFont(new java.awt.Font("Comic Sans MS", 1, 48)); // NOI18N
+        jlTitle.setText("~ Sudoku ~");
 
         javax.swing.GroupLayout jpTitleLayout = new javax.swing.GroupLayout(jpTitle);
         jpTitle.setLayout(jpTitleLayout);
         jpTitleLayout.setHorizontalGroup(
             jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTitleLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jlTitle)
-                .addGap(171, 171, 171))
-        );
-        jpTitleLayout.setVerticalGroup(
-            jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jpTitleLayout.createSequentialGroup()
-                .addContainerGap()
+                .addGap(86, 86, 86)
                 .addComponent(jlTitle)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+        jpTitleLayout.setVerticalGroup(
+            jpTitleLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jpTitleLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jlTitle)
+                .addContainerGap())
+        );
 
-        jpMenuItems.setBackground(new java.awt.Color(51, 0, 51));
-        jpMenuItems.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jpMenuItems.setBackground(new java.awt.Color(255, 204, 255));
+        jpMenuItems.setBorder(javax.swing.BorderFactory.createEtchedBorder());
 
         newGame.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         newGame.setText("New Game");
@@ -137,6 +137,7 @@ public class MainFrame extends javax.swing.JFrame {
         jTextArea1.setEditable(false);
         jTextArea1.setBackground(new java.awt.Color(255, 204, 255));
         jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
         jTextArea1.setText("Welcome to Sudoku. Please enter your name and start a new game. Good Luck!");
@@ -153,7 +154,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jpMenuItems, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jtWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, 280, Short.MAX_VALUE)
+                .addComponent(jtWelcome, javax.swing.GroupLayout.DEFAULT_SIZE, 278, Short.MAX_VALUE)
                 .addGap(6, 6, 6))
         );
         jpBodyLayout.setVerticalGroup(
@@ -166,7 +167,7 @@ public class MainFrame extends javax.swing.JFrame {
                     .addGroup(jpBodyLayout.createSequentialGroup()
                         .addGap(26, 26, 26)
                         .addComponent(jtWelcome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(78, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -177,9 +178,7 @@ public class MainFrame extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addComponent(jpBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jpBody, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -190,8 +189,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_quitActionPerformed
 
     private void newGameMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_newGameMouseClicked
-        NewGameView newGame = new NewGameView();
-        newGame.getInput(null);
+        NewGameFrame newGameFrame = new NewGameFrame();
+        newGameFrame.setVisible(true);
     }//GEN-LAST:event_newGameMouseClicked
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked

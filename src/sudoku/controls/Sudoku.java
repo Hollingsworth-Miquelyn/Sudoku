@@ -8,6 +8,7 @@ import java.util.Scanner;
 import exception.SudokuException;
 import sudoku.enums.ErrorType;
 import sudoku.cit260.group4.views.MainFrame;
+import sudoku.cit260.group4.views.NewGameFrame;
 
 
 /**
@@ -17,6 +18,7 @@ import sudoku.cit260.group4.views.MainFrame;
 
 public class Sudoku {
     private static MainFrame mainFrame;
+    public static NewGameFrame newGameFrame;
 
     public static Scanner getInFile() {
         return inFile;
