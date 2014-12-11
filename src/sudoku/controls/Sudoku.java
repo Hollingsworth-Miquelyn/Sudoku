@@ -9,6 +9,7 @@ import exception.SudokuException;
 import sudoku.enums.ErrorType;
 import sudoku.cit260.group4.views.MainFrame;
 import sudoku.cit260.group4.views.NewGameFrame;
+import sudoku.cit260.group4.views.LastMenuFrame;
 
 
 /**
@@ -19,6 +20,7 @@ import sudoku.cit260.group4.views.NewGameFrame;
 public class Sudoku {
     private static MainFrame mainFrame;
     public static NewGameFrame newGameFrame;
+    public static LastMenuFrame lastMenuFram;
 
     public static Scanner getInFile() {
         return inFile;
