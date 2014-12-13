@@ -195,8 +195,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_newGameMouseClicked
 
     private void helpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_helpMouseClicked
-        HelpMenuView helpMenu = new HelpMenuView();
-        helpMenu.getInput(null);
+        HelpMenuFrame helpMenuFrame = new HelpMenuFrame();
+        helpMenuFrame.setVisible(true);
     }//GEN-LAST:event_helpMouseClicked
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
