@@ -1,26 +1,28 @@
 package sudoku.cit260.group4.views;
 
 import sudoku.controls.NewGameControl;
+import sudoku.controls.Sudoku;
 import sudoku.controls.MainMenuControl;
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+import sudoku.controls.PlayerNameMenuControl;
+import sudoku.miscellaneous.Player;
 
-/**
+ /**
  *
  * @author Jessica, Miquelyn, Jessica, Heidi
  */
 public class PlayerNameFrame extends javax.swing.JFrame {
+    private Player player = null;
 
-    private NewGameControl newGameCommands = null;
     /**
-     * Creates new form EnterPlayerName
+     * Creates new form PlayerNameFrame
      */
+
+    
     public PlayerNameFrame() {
         initComponents();
+        
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -46,6 +48,11 @@ public class PlayerNameFrame extends javax.swing.JFrame {
         jNameLable.setText("Please Enter Your Name:");
 
         jNameText.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jNameText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNameTextActionPerformed(evt);
+            }
+        });
 
         jNameButton.setFont(new java.awt.Font("Comic Sans MS", 0, 13)); // NOI18N
         jNameButton.setText("Continue");
@@ -103,7 +110,27 @@ public class PlayerNameFrame extends javax.swing.JFrame {
         this.mainMenuControl.newGame();
     }//GEN-LAST:event_jNameButtonMouseClicked
 
+    private void jNameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNameTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNameTextActionPerformed
 
+  private void bContinueMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_bContinueMouseClicked
+        this.continueToGame();
+    }//GEN-LAST:event_bContinueMouseClicked
+
+    private void bContinueKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_bContinueKeyPressed
+        int key = evt.getKeyCode();
+        if (key == 10) {
+            this.continueToGame();
+        };
+    }//GEN-LAST:event_bContinueKeyPressed
+
+    private void continueToGame() {
+        
+        PlayerNameMenuControl.savePlayersNames(player);
+        
+        this.dispose();
+    } 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jNameButton;
     private javax.swing.JLabel jNameLable;

@@ -10,6 +10,7 @@ import sudoku.enums.ErrorType;
 import sudoku.cit260.group4.views.MainFrame;
 import sudoku.cit260.group4.views.NewGameFrame;
 import sudoku.cit260.group4.views.LastMenuFrame;
+import sudoku.cit260.group4.views.PlayerNameFrame;
 
 
 /**
@@ -18,6 +19,7 @@ import sudoku.cit260.group4.views.LastMenuFrame;
  */
 
 public class Sudoku {
+    private static PlayerNameFrame playerNameFrame;
     private static MainFrame mainFrame;
     public static NewGameFrame newGameFrame;
     public static LastMenuFrame lastMenuFram;
@@ -47,6 +49,29 @@ public class Sudoku {
     }
     public void displayWelcomeUser(){
         System.out.println("\nWelcome " + this.name + "\n");
+    }
+    public static void playerName(String[] args) {    
+        Sudoku sudoku = null;
+        try {
+            sudoku = new Sudoku();
+           
+            java.awt.EventQueue.invokeLater(new Runnable() {
+                public void run() {
+                    Sudoku.playerNameFrame = new PlayerNameFrame();
+                    
+                    Sudoku.playerNameFrame.setVisible(true);
+                }
+            });
+        }
+        catch (Throwable ex){
+            ErrorType.displayErorrMsg("Unexpected error: " + ex.getMessage());
+            ErrorType.displayErorrMsg(ex.getStackTrace().toString());
+        }
+        finally {
+            if (Sudoku.playerNameFrame != null) {
+                Sudoku.playerNameFrame.dispose();
+            }
+        }
     }
     
     public static void main(String[] args) {    
@@ -105,6 +130,7 @@ public class Sudoku {
     public void displayGoodbyUser(){
         System.out.println("\n\tThanks for playing " + this.name + "!\n");
     }
+    
 private class GetName{
     private String name;
     
