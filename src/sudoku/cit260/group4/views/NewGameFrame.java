@@ -11,7 +11,7 @@ import sudoku.controls.MainMenuControl;
 
 /**
  *
- * @author Jessica
+ * @author Jessica Marshall
  */
 public class NewGameFrame extends javax.swing.JFrame {
     private MainMenuControl mainCommands = new MainMenuControl();
